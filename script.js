@@ -623,3 +623,48 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBackgroundZoom();
 
 });
+
+
+/* ==========================================
+   PREWEDDING PAGE — SCROLL RESPONSIVE BG ZOOM
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const preweddingBackground = document.querySelector(".prewedding-shared-bg");
+
+    if (!preweddingBackground) return;
+
+    function updatePreweddingBackgroundZoom() {
+
+        const rect = preweddingBackground.getBoundingClientRect();
+
+        const totalDistance = rect.height + window.innerHeight;
+
+        const progress = Math.max(
+            0,
+            Math.min(
+                1,
+                (window.innerHeight - rect.top) / totalDistance
+            )
+        );
+
+        // Scroll down = zoom out
+        // Scroll up = zoom in
+        const zoom = 1.20 - (progress * 0.20);
+
+        preweddingBackground.style.setProperty(
+            "--prewedding-bg-zoom",
+            zoom.toFixed(3)
+        );
+    }
+
+    window.addEventListener("scroll", updatePreweddingBackgroundZoom, {
+        passive: true
+    });
+
+    window.addEventListener("resize", updatePreweddingBackgroundZoom);
+
+    updatePreweddingBackgroundZoom();
+
+});
