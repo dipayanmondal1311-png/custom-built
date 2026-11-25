@@ -1,0 +1,767 @@
+
+/* ==========================================
+   HEERA AI — DEDICATED CHAT PAGE
+========================================== */
+
+.heera-chatbot-page {
+    background: #080808;
+    color: #F5F0E8;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* PAGE LAYOUT */
+
+.heera-chatbot-main {
+    min-height: calc(100vh - 100px);
+    padding: 60px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 50%,
+            rgba(198,161,91,.08),
+            transparent 45%
+        ),
+        #080808;
+}
+
+.heera-chatbot-shell {
+    width: 100%;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 65px;
+    align-items: center;
+}
+
+/* INTRO */
+
+.heera-chatbot-intro {
+    padding: 20px 0;
+}
+
+.heera-chatbot-eyebrow {
+    display: inline-block;
+    color: #C6A15B;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.heera-chatbot-intro h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.15;
+    color: #F5F0E8;
+    margin: 0;
+}
+
+.heera-chatbot-intro h1 span {
+    color: #C6A15B;
+}
+
+.heera-chatbot-intro-text {
+    max-width: 440px;
+    color: rgba(245,240,232,.65);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 25px;
+}
+
+.heera-chatbot-intro-divider {
+    width: 65px;
+    height: 1px;
+    background: #C6A15B;
+    margin: 35px 0;
+}
+
+.heera-chatbot-intro-detail {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.heera-chatbot-detail-number {
+    font-family: 'Bodoni Moda', serif;
+    color: #C6A15B;
+    font-size: 20px;
+    min-width: 30px;
+}
+
+.heera-chatbot-intro-detail p {
+    font-size: 12px;
+    color: rgba(245,240,232,.72);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.heera-chatbot-intro-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 50px;
+    color: #C6A15B;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.heera-chatbot-gold-line {
+    width: 35px;
+    height: 1px;
+    background: #C6A15B;
+}
+
+/* CHAT CARD */
+
+.heera-chat-interface {
+    min-width: 0;
+    height: 690px;
+    max-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #11110F;
+    border: 1px solid rgba(198,161,91,.28);
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45),
+        0 0 30px rgba(198,161,91,.04);
+}
+
+/* HEADER */
+
+.heera-chat-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 24px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #171510,
+        #11110F
+    );
+
+    border-bottom: 1px solid rgba(198,161,91,.15);
+}
+
+.heera-chat-page-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.heera-chat-page-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #F0D38C,
+        #A77B35
+    );
+
+    color: #080808;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 22px;
+
+    box-shadow: 0 0 20px rgba(198,161,91,.15);
+}
+
+.heera-chat-page-brand h2 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 0 0 7px;
+    color: #F5F0E8;
+}
+
+.heera-chat-page-brand p {
+    font-size: 10px;
+    color: rgba(245,240,232,.55);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.heera-chat-online-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8EAD72;
+    box-shadow: 0 0 8px rgba(142,173,114,.5);
+}
+
+.heera-chat-header-tag {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #C6A15B;
+    border: 1px solid rgba(198,161,91,.25);
+    padding: 8px 10px;
+}
+
+/* MESSAGES */
+
+.heera-chat-page-messages {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+
+    padding: 28px 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #51432C transparent;
+}
+
+.heera-chat-welcome-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.heera-chat-welcome-icon {
+    flex-shrink: 0;
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #C6A15B;
+    color: #080808;
+
+    font-family: 'Bodoni Moda', serif;
+    font-size: 18px;
+}
+
+.heera-chat-welcome-content {
+    min-width: 0;
+}
+
+.heera-chat-welcome-label {
+    color: #C6A15B;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.heera-chat-welcome-content h3 {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.45;
+    color: #F5F0E8;
+    margin: 14px 0;
+}
+
+.heera-chat-welcome-content p {
+    color: rgba(245,240,232,.68);
+    font-size: 12px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.heera-chat-welcome-prompt {
+    display: block;
+    color: #C6A15B;
+    font-size: 11px;
+    margin-top: 22px;
+}
+
+/* CHAT MESSAGE BUBBLES
+   Existing chatbot.js uses these classes */
+
+.message {
+    max-width: 85%;
+    padding: 14px 17px;
+    border-radius: 12px;
+
+    font-size: 12px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.user-message {
+    align-self: flex-end;
+
+    color: #080808;
+    background: #C6A15B;
+
+    border-bottom-right-radius: 3px;
+}
+
+.bot-message {
+    align-self: flex-start;
+
+    color: #F5F0E8;
+    background: #1D1C19;
+
+    border: 1px solid rgba(198,161,91,.12);
+    border-bottom-left-radius: 3px;
+}
+
+/* TYPING INDICATOR */
+
+.ai-typing {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.typing-robot {
+    font-size: 18px;
+}
+
+.typing-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.typing-label {
+    font-size: 10px;
+    color: rgba(245,240,232,.6);
+}
+
+.typing-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.typing-dots i {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #C6A15B;
+    animation: heeraTyping 1s infinite alternate;
+}
+
+.typing-dots i:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.typing-dots i:nth-child(3) {
+    animation-delay: .4s;
+}
+
+@keyframes heeraTyping {
+    from {
+        opacity: .3;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+}
+
+/* SUGGESTIONS */
+
+.heera-chat-page-suggestions {
+    padding: 18px 25px;
+
+    border-top: 1px solid rgba(198,161,91,.12);
+}
+
+.heera-chat-suggestions-label {
+    display: block;
+    color: #C6A15B;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.heera-chat-suggestion-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.heera-chat-page-suggestions .suggestion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 12px;
+
+    background: #171613;
+    color: rgba(245,240,232,.75);
+
+    border: 1px solid rgba(198,161,91,.18);
+    border-radius: 30px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.heera-chat-page-suggestions .suggestion i {
+    color: #C6A15B;
+}
+
+.heera-chat-page-suggestions .suggestion:hover {
+    border-color: #C6A15B;
+    background: rgba(198,161,91,.08);
+    color: #F5F0E8;
+}
+
+/* INPUT */
+
+.heera-chat-page-input-area {
+    padding: 20px 25px 18px;
+    background: #0D0D0C;
+    border-top: 1px solid rgba(198,161,91,.15);
+}
+
+.heera-chat-page-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 6px 7px 6px 16px;
+
+    background: #181715;
+    border: 1px solid rgba(198,161,91,.25);
+    border-radius: 50px;
+
+    transition: border-color .3s ease;
+}
+
+.heera-chat-page-form:focus-within {
+    border-color: #C6A15B;
+}
+
+.heera-chat-page-form input {
+    flex: 1;
+    min-width: 0;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: #F5F0E8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+
+    padding: 12px 0;
+}
+
+.heera-chat-page-form input::placeholder {
+    color: rgba(245,240,232,.4);
+}
+
+.heera-chat-page-form button {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #E8C56F,
+        #B88732
+    );
+
+    color: #080808;
+    cursor: pointer;
+
+    transition: transform .3s ease;
+}
+
+.heera-chat-page-form button:hover {
+    transform: scale(1.07);
+}
+
+.heera-chat-page-disclaimer {
+    color: rgba(245,240,232,.35);
+    font-size: 9px;
+    line-height: 1.7;
+    text-align: center;
+    margin: 13px 0 0;
+}
+
+/* FOOTER */
+
+.heera-chatbot-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 5%;
+
+    border-top: 1px solid rgba(198,161,91,.12);
+
+    color: rgba(245,240,232,.4);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.heera-chatbot-footer a {
+    color: #C6A15B;
+    text-decoration: none;
+}
+
+.heera-chatbot-footer a i {
+    margin-right: 8px;
+}
+
+.chatbot-back-mobile {
+    display: none;
+}
+
+/* ==========================================
+   RESPONSIVE — TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .heera-chatbot-main {
+        padding: 45px 4%;
+    }
+
+    .heera-chatbot-shell {
+        grid-template-columns: 1fr;
+        max-width: 750px;
+        gap: 35px;
+    }
+
+    .heera-chatbot-intro {
+        text-align: center;
+    }
+
+    .heera-chatbot-intro-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heera-chatbot-intro-divider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heera-chatbot-intro-detail {
+        justify-content: center;
+    }
+
+    .heera-chatbot-intro-footer {
+        justify-content: center;
+    }
+
+    .heera-chat-interface {
+        height: 680px;
+        max-height: none;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE — MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .heera-chatbot-main {
+        padding: 25px 14px 35px;
+        min-height: auto;
+    }
+
+    .heera-chatbot-shell {
+        gap: 25px;
+    }
+
+    .heera-chatbot-intro {
+        padding: 15px 5px;
+    }
+
+    .heera-chatbot-eyebrow {
+        font-size: 8px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .heera-chatbot-intro h1 {
+        font-size: 42px;
+    }
+
+    .heera-chatbot-intro-text {
+        font-size: 12px;
+        line-height: 1.8;
+        margin-top: 15px;
+    }
+
+    .heera-chatbot-intro-divider {
+        margin: 25px auto;
+    }
+
+    .heera-chatbot-intro-detail {
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .heera-chatbot-detail-number {
+        font-size: 16px;
+    }
+
+    .heera-chatbot-intro-detail p {
+        font-size: 10px;
+        text-align: left;
+    }
+
+    .heera-chatbot-intro-footer {
+        margin-top: 30px;
+        font-size: 8px;
+    }
+
+    .heera-chat-interface {
+        height: 720px;
+        height: min(720px, 85vh);
+        min-height: 550px;
+        border-radius: 14px;
+    }
+
+    .heera-chat-page-header {
+        padding: 18px 15px;
+    }
+
+    .heera-chat-page-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .heera-chat-header-tag {
+        font-size: 7px;
+        padding: 7px;
+    }
+
+    .heera-chat-page-messages {
+        padding: 22px 15px;
+    }
+
+    .heera-chat-welcome-message {
+        gap: 12px;
+    }
+
+    .heera-chat-welcome-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .heera-chat-welcome-content h3 {
+        font-size: 22px;
+    }
+
+    .heera-chat-welcome-content p {
+        font-size: 11px;
+    }
+
+    .message {
+        max-width: 92%;
+        font-size: 11px;
+        padding: 12px 14px;
+    }
+
+    .heera-chat-page-suggestions {
+        padding: 15px;
+    }
+
+    .heera-chat-suggestion-list {
+        gap: 7px;
+    }
+
+    .heera-chat-page-suggestions .suggestion {
+        font-size: 9px;
+        padding: 9px 11px;
+    }
+
+    .heera-chat-page-input-area {
+        padding: 15px 12px;
+    }
+
+    .heera-chat-page-form input {
+        font-size: 11px;
+    }
+
+    .heera-chat-page-form button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .heera-chat-page-disclaimer {
+        font-size: 8px;
+    }
+
+    .heera-chatbot-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 22px 15px;
+        font-size: 8px;
+    }
+
+    .chatbot-nav-links {
+        display: none !important;
+    }
+
+    .chatbot-back-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        border: 1px solid rgba(198,161,91,.3);
+        border-radius: 50%;
+
+        color: #C6A15B;
+        text-decoration: none;
+    }
+}
+
+/* Smaller phones */
+
+@media (max-width: 380px) {
+
+    .heera-chatbot-intro h1 {
+        font-size: 36px;
+    }
+
+    .heera-chat-interface {
+        min-height: 520px;
+    }
+
+    .heera-chat-page-suggestions .suggestion {
+        padding: 8px 9px;
+        font-size: 8px;
+    }
+
+    .heera-chat-header-tag {
+        display: none;
+    }
+}
