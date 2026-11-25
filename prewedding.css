@@ -177,11 +177,10 @@
     z-index: -2;
 
     background-image: url('images/prewedding-story-background.jpg');
-    background-position: center;
-    background-size: cover;
+    background-position: center center;
+    background-size: var(--prewedding-bg-size, 120%) auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
-   
 }
 
 /* DARK OVERLAY — CONTENT READABILITY */
