@@ -645,9 +645,8 @@
 
 
     /* MOBILE SHARED BACKGROUND */
-
 .prewedding-shared-bg::before {
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
 }
