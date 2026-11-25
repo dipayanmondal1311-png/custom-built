@@ -320,9 +320,9 @@ if (has(
             "contact number",
             "reach you",
             "যোগাযোগ"
-        )) {
-            return "You can reach HEERA Photography through the Contact Us page on this website. Please share your event date, venue and enquiry details there, and the team can assist you with bookings, packages and availability.";
-        }
+       )) {
+    return "You can contact HEERA Photography through the following details:\n\n📞 Phone: +91 82098 25535\n📧 Email: heeraphotographyjaipur@gmail.com\n\nFor complete contact information and further enquiries, please visit our Contact Us page on this website.";
+}
 
         // ------------------------------------------
         // ASSISTANT IDENTITY
