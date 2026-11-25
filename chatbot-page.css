@@ -587,9 +587,9 @@
 @media (max-width: 600px) {
 
     .heera-chatbot-main {
-        padding: 25px 14px 35px;
-        min-height: auto;
-    }
+    padding: 120px 14px 35px;
+    min-height: auto;
+}
 
     .heera-chatbot-shell {
         gap: 25px;
