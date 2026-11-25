@@ -109,25 +109,25 @@ document.addEventListener("DOMContentLoaded", () => {
             return "Hello! Welcome to HEERA Photography. How can we help you make your special moments unforgettable?";
         }
 
-        // ------------------------------------------
-        // PRICING AND PACKAGES
-        // ------------------------------------------
+      // ------------------------------------------
+// PRICING AND PACKAGES
+// ------------------------------------------
 
-        if (has(
-            "price",
-            "pricing",
-            "cost",
-            "costs",
-            "charge",
-            "charges",
-            "how much",
-            "rate",
-            "rates",
-            "budget",
-            "package",
-            "packages",
-            "দাম",
-            "টাকা"
+const asksPrice = has(
+    "price",
+    "pricing",
+    "cost",
+    "costs",
+    "charge",
+    "charges",
+    "how much",
+    "rate",
+    "rates",
+    "budget",
+    "package",
+    "packages",
+    "দাম",
+    "টাকা",
     "starting price",
     "starts from",
     "start from",
@@ -139,39 +139,55 @@ document.addEventListener("DOMContentLoaded", () => {
     "price start",
     "prices start",
     "beginning price"
-)) {
-    return "Our photography packages start from INR 10,000/-. The final price depends on the type of event, coverage duration, location and your specific requirements. Feel free to contact HEERA Photography for a personalised quote.";
+);
+
+if (asksPrice) {
+
+    // Starting price enquiry
+    if (has(
+        "starting price",
+        "starts from",
+        "start from",
+        "starting cost",
+        "minimum price",
+        "minimum cost",
+        "starting rate",
+        "start at",
+        "price start",
+        "prices start",
+        "beginning price"
+    )) {
+        return "Our photography packages start from INR 10,000/-. The final price depends on the type of event, coverage duration, location and your specific requirements. Feel free to contact HEERA Photography for a personalised quote.";
+    }
+
+    // Pre-wedding pricing
+    if (has(
+        "pre wedding",
+        "prewedding",
+        "couple shoot",
+        "engagement shoot"
+    )) {
+        return "Our pre-wedding shoot charges depend on the location, shoot duration, and the photography package you choose. Please contact HEERA Photography for the latest pricing and a personalised quote. We don't want to give you an incorrect price.";
+    }
+
+    // Candid photography pricing
+    if (has("candid")) {
+        return "Our candid photography charges depend on your event, coverage duration, and requirements. Please contact HEERA Photography for the latest pricing and a personalised quote.";
+    }
+
+    // Cinematic film pricing
+    if (has(
+        "cinematic",
+        "videography",
+        "wedding video",
+        "wedding film"
+    )) {
+        return "Our cinematic film packages depend on the event, coverage duration, and requirements. Please contact HEERA Photography for the latest pricing and a personalised quote.";
+    }
+
+    // General pricing
+    return "Our photography packages depend on your event, location, coverage duration, and requirements. Please contact HEERA Photography for the latest pricing and a personalised quote.";
 }
-
-            // Pre-wedding pricing
-            if (has(
-                "pre wedding",
-                "prewedding",
-                "couple shoot",
-                "engagement shoot"
-            )) {
-                return "Our pre-wedding shoot charges depend on the location, shoot duration, and the photography package you choose. Please contact HEERA Photography for the latest pricing and a personalised quote. We don't want to give you an incorrect price.";
-            }
-
-            // Candid photography pricing
-            if (has("candid")) {
-                return "Our candid photography charges depend on your event, coverage duration, and requirements. Please contact HEERA Photography for the latest pricing and a personalised quote.";
-            }
-
-            // Cinematic film pricing
-            if (has(
-                "cinematic",
-                "videography",
-                "wedding video",
-                "wedding film"
-            )) {
-                return "Our cinematic film packages depend on the event, coverage duration, and requirements. Please contact HEERA Photography for the latest pricing and a personalised quote.";
-            }
-
-            // General pricing
-            return "Our photography packages depend on your event, location, coverage duration, and requirements. Please contact HEERA Photography for the latest pricing and a personalised quote.";
-        }
-
         // ------------------------------------------
         // BOOKING AND AVAILABILITY
         // ------------------------------------------
