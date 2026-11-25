@@ -761,6 +761,22 @@
         font-size: 8px;
     }
 
+   /* HEERA LOGO — CHAT AVATARS */
+
+.heera-chat-page-avatar img,
+.heera-chat-welcome-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+}
+
+.heera-chat-page-avatar,
+.heera-chat-welcome-icon {
+    overflow: hidden;
+}
+
     .heera-chat-header-tag {
         display: none;
     }
