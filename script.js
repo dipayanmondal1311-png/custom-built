@@ -746,8 +746,8 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         // Start: 100%
-        // End: 120%
-        const zoom = 1 + (progress * 0.20);
+        // End: 140%
+        const zoom = 1 + (progress * 0.40);
 
         document.body.style.setProperty(
             "--wedding-bg-zoom",
