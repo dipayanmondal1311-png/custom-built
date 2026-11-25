@@ -7836,3 +7836,1023 @@ body.contact-page .site-header .nav-logo .brand-tagline {
         margin-bottom: 20px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   HOME HERO - MOBILE BACKGROUND IMAGE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .hero-background {
+        background-image: url("mimages/home-hero-mobile.png");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    .hero-background .hero-image {
+        display: none;
+    }
+
+}
+
+/* HOME INTRO - MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+
+    .intro-heritage-background {
+        background-image: url("mimages/home-intro-mobile.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .intro-heritage-background img {
+        opacity: 0 !important;
+    }
+
+}
+
+/* HOME SIGNATURE SERVICES - MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+
+    .services-heritage-background {
+        background-image: url("mimages/home-signature-services-mobile.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .services-heritage-background img {
+        opacity: 0 !important;
+    }
+
+}
+
+
+/* HOME TESTIMONIALS - MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+
+    .testimonials-section .testimonial-hero-background {
+        background-image: url("mimages/home-testimonials-mobile.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .testimonials-section .testimonial-hero-background img {
+        opacity: 0 !important;
+    }
+
+}
+
+
+/* HOME BOOKING CTA - MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+
+    .booking-background {
+        background-image: url("mimages/home-booking-cta-mobile.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .booking-background img {
+        opacity: 0 !important;
+    }
+
+}
+
+
+/* ABOUT HERO - MOBILE BACKGROUND IMAGE */
+
+@media screen and (max-width: 768px) {
+
+    .about-hero-background {
+        background-image: url("mimages/about-hero-mobile.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .about-hero-background img {
+        opacity: 0 !important;
+    }
+
+}
+
+/* SERVICES HERO - MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+
+    .services-hero-background {
+        background-image: url("mimages/services-hero-mobile.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .services-hero-background img {
+        opacity: 0 !important;
+    }
+
+}
+
+/* SERVICES PAGE - INTRO + ALL SERVICES MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+
+    .services-background-wrapper {
+        background-image:
+            linear-gradient(
+                rgba(8, 8, 8, 0.68),
+                rgba(8, 8, 8, 0.68)
+            ),
+            url("mimages/services-page-mobile.png") !important;
+
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+
+}
+
+
+/* SERVICES PAGE — OUR APPROACH MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+    .service-approach-section .approach-background-wrapper {
+        background-image:
+            linear-gradient(
+                rgba(8, 8, 8, 0.55),
+                rgba(8, 8, 8, 0.55)
+            ),
+            url("mimages/services-approach-mobile.png");
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .service-approach-section .approach-background-wrapper img {
+        opacity: 0 !important;
+    }
+}
+
+
+/* SERVICES PAGE — CTA MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+    .services-cta-section .services-cta-background {
+        background-image: url("mimages/services-cta-mobile.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .services-cta-section .services-cta-background img {
+        opacity: 0 !important;
+    }
+}
+
+/* TESTIMONIALS PAGE — HERO MOBILE BACKGROUND */
+
+@media screen and (max-width: 768px) {
+    .testimonial-hero .testimonial-hero-background {
+        background-image: url("mimages/testimonials-hero-mobile.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .testimonial-hero .testimonial-hero-background img {
+        opacity: 0 !important;
+    }
+}
+
+/* CONTACT PAGE — MOBILE HERO BACKGROUND */
+
+@media screen and (max-width: 780px) {
+    .contact-page .contact-hero::before {
+        background-image: url("mimages/contact-hero-mobile.png");
+        background-size: cover;
+        background-position: 50% center;
+        background-repeat: no-repeat;
+        transform: none;
+    }
+}
+
+/* CONTACT DETAILS + ENQUIRY — MOBILE BACKGROUND */
+
+@media screen and (max-width: 780px) {
+
+    .contact-page .contact-main::before {
+        background-image: url("mimages/contact-main-mobile.png");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        filter: blur(2px);
+        transform: scale(1.02);
+    }
+
+}
+
+
+
+/* ==========================================
+   CONTACT PAGE — MOBILE NAVBAR MATCH HOME
+========================================== */
+
+@media screen and (max-width: 780px) {
+
+    /* Full screen menu */
+    body.contact-page .site-header .nav-links {
+        position: fixed !important;
+        inset: 0 !important;
+        z-index: 1002 !important;
+
+        width: 100% !important;
+        min-height: 100svh !important;
+        padding: 100px 28px 45px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 19px !important;
+
+        background: rgba(8, 8, 8, .985) !important;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+
+        transition:
+            opacity .4s ease,
+            visibility .4s ease,
+            transform .4s ease;
+    }
+
+    /* Menu open state */
+    body.contact-page .site-header .nav-links.open {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+    }
+
+    /* Navigation links */
+    body.contact-page .site-header .nav-links > li > a {
+        min-height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+
+        font-family: "Bodoni Moda", Georgia, serif !important;
+        font-size: 25px !important;
+        font-weight: 400 !important;
+        letter-spacing: .3px !important;
+        line-height: 1.5 !important;
+
+        text-transform: uppercase !important;
+
+        color: #F5F0E8 !important;
+        background: transparent !important;
+        border: 0 !important;
+    }
+
+    /* Active link */
+    body.contact-page .site-header .nav-links > li > a.active {
+        color: #D4AF75 !important;
+    }
+
+    /* Contact Us button */
+    body.contact-page .site-header .nav-links > li > a[href="contact.html"] {
+        min-height: 46px !important;
+        margin-top: 5px !important;
+        padding: 0 23px !important;
+
+        font-family: "Montserrat", Arial, sans-serif !important;
+        font-size: 10px !important;
+        font-weight: 600 !important;
+        letter-spacing: 1.4px !important;
+
+        color: #F5F0E8 !important;
+        background: transparent !important;
+        border: 1px solid #C6A15B !important;
+        border-radius: 0 !important;
+    }
+
+    /* Menu toggle stays above overlay */
+    body.contact-page .site-header .menu-toggle {
+        position: relative !important;
+        z-index: 1004 !important;
+    }
+}
+
+
+
+
+/* =========================================================
+   HEERA AI ASSISTANT
+   PREMIUM LUXURY CONCIERGE INTERFACE
+========================================================= */
+
+.heera-ai-widget {
+    --ai-bg: #0b0b0a;
+    --ai-surface: #111110;
+    --ai-surface-2: #181715;
+    --ai-gold: #c6a15b;
+    --ai-gold-light: #dfc18a;
+    --ai-ivory: #f5f0e8;
+    --ai-muted: #99938a;
+    --ai-border: rgba(198, 161, 91, .2);
+
+    position: fixed;
+    right: 30px;
+    bottom: 28px;
+    z-index: 10000;
+
+    font-family: var(--body-font, "Montserrat", Arial, sans-serif);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   FLOATING LAUNCHER
+========================= */
+
+.heera-ai-launcher {
+    position: relative;
+
+    min-height: 58px;
+    padding: 0 23px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    color: #090909;
+    background: linear-gradient(
+        135deg,
+        #e0c58e 0%,
+        #c6a15b 48%,
+        #a9813e 100%
+    );
+
+    border: 1px solid rgba(255, 239, 204, .45);
+    border-radius: 50px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, .42),
+        inset 0 1px 0 rgba(255, 255, 255, .25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        filter .3s ease;
+}
+
+.heera-ai-launcher:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.06);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .5),
+        0 0 25px rgba(198, 161, 91, .16);
+}
+
+.heera-ai-launcher svg {
+    width: 22px;
+    height: 22px;
+}
+
+.heera-ai-launcher-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   MAIN CHAT WINDOW
+========================= */
+
+.heera-ai-panel {
+    position: absolute;
+    right: 0;
+    bottom: 76px;
+
+    width: 410px;
+    height: 590px;
+    max-width: calc(100vw - 36px);
+    max-height: calc(100dvh - 115px);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: var(--ai-bg);
+
+    border: 1px solid rgba(198, 161, 91, .28);
+    border-radius: 17px;
+
+    box-shadow:
+        0 25px 90px rgba(0, 0, 0, .72),
+        0 0 35px rgba(198, 161, 91, .045);
+
+    animation: heeraAiAppear .3s ease both;
+}
+
+.heera-ai-panel[hidden] {
+    display: none !important;
+}
+
+@keyframes heeraAiAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.985);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.heera-ai-header {
+    min-height: 82px;
+    padding: 17px 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(198, 161, 91, .10),
+            transparent 75%
+        ),
+        #111110;
+
+    border-bottom: 1px solid var(--ai-border);
+}
+
+.heera-ai-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+.heera-ai-avatar {
+    position: relative;
+
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--ai-gold-light);
+
+    background: linear-gradient(
+        145deg,
+        #292318,
+        #11100d
+    );
+
+    border: 1px solid rgba(198, 161, 91, .55);
+    border-radius: 13px;
+
+    box-shadow: inset 0 0 15px rgba(198, 161, 91, .06);
+}
+
+.heera-ai-avatar svg {
+    width: 25px;
+    height: 25px;
+}
+
+.heera-ai-brand-info h3 {
+    color: var(--ai-ivory);
+    font-family: var(--heading-font, Georgia, serif);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: .1px;
+}
+
+.heera-ai-brand-info p {
+    margin-top: 5px;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--ai-muted);
+    font-size: 9px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.heera-ai-status-dot {
+    width: 6px;
+    height: 6px;
+    margin-right: 7px;
+
+    flex-shrink: 0;
+
+    background: #9ab47b;
+    border-radius: 50%;
+
+    box-shadow: 0 0 9px rgba(154, 180, 123, .55);
+}
+
+.heera-ai-close {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    color: #b9ad98;
+    background: rgba(255, 255, 255, .025);
+
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 50%;
+
+    font-size: 23px;
+    line-height: 1;
+
+    transition: all .25s ease;
+}
+
+.heera-ai-close:hover {
+    color: var(--ai-gold-light);
+    background: rgba(198, 161, 91, .1);
+    border-color: var(--ai-gold);
+}
+
+/* =========================
+   CONVERSATION AREA
+========================= */
+
+.heera-ai-messages {
+    flex: 1;
+    min-height: 0;
+
+    padding: 22px 19px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    background:
+        radial-gradient(
+            ellipse at 100% 0%,
+            rgba(198, 161, 91, .055),
+            transparent 48%
+        ),
+        var(--ai-surface);
+
+    scrollbar-width: thin;
+    scrollbar-color: #705b37 transparent;
+}
+
+.heera-ai-messages::-webkit-scrollbar {
+    width: 4px;
+}
+
+.heera-ai-messages::-webkit-scrollbar-thumb {
+    background: #705b37;
+    border-radius: 10px;
+}
+
+/* =========================
+   WELCOME EXPERIENCE
+========================= */
+
+.heera-ai-welcome {
+    padding: 9px 2px 17px;
+    color: var(--ai-ivory);
+}
+
+.heera-ai-welcome-avatar {
+    width: 47px;
+    height: 47px;
+    margin-bottom: 20px;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--ai-gold-light);
+
+    background: linear-gradient(
+        145deg,
+        #282216,
+        #15130f
+    );
+
+    border: 1px solid rgba(198, 161, 91, .4);
+    border-radius: 13px;
+}
+
+.heera-ai-welcome-avatar svg {
+    width: 25px;
+    height: 25px;
+}
+
+.heera-ai-welcome-label {
+    display: block;
+    margin-bottom: 13px;
+
+    color: var(--ai-gold);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+}
+
+.heera-ai-welcome-content h4 {
+    max-width: 320px;
+    margin-bottom: 13px;
+
+    color: var(--ai-ivory);
+    font-family: var(--heading-font, Georgia, serif);
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -.3px;
+}
+
+.heera-ai-welcome-content p {
+    max-width: 340px;
+
+    color: #aaa49b;
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 400;
+}
+
+.heera-ai-prompt {
+    display: block;
+    margin-top: 19px;
+
+    color: var(--ai-gold-light);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .4px;
+}
+
+/* =========================
+   MESSAGE BUBBLES
+========================= */
+
+.heera-ai-messages .message {
+    max-width: 88%;
+    padding: 12px 15px;
+
+    border-radius: 11px;
+
+    font-size: 12px;
+    line-height: 1.85;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.heera-ai-messages .bot-message {
+    align-self: flex-start;
+
+    color: #e8e2d8;
+    background: #1a1916;
+
+    border: 1px solid rgba(198, 161, 91, .14);
+    border-top-left-radius: 3px;
+}
+
+.heera-ai-messages .user-message {
+    align-self: flex-end;
+
+    color: #17120a;
+    background: linear-gradient(
+        135deg,
+        #dfc18a,
+        #c6a15b
+    );
+
+    border: 1px solid rgba(255, 239, 204, .3);
+    border-top-right-radius: 3px;
+}
+
+/* =========================
+   SUGGESTION CHIPS
+========================= */
+
+.heera-ai-suggestions {
+    padding: 14px 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    background: #111110;
+    border-top: 1px solid rgba(198, 161, 91, .12);
+}
+
+.heera-ai-suggestions .suggestion {
+    min-height: 32px;
+    padding: 7px 12px;
+
+    color: #d6bc8c;
+    background: rgba(198, 161, 91, .035);
+
+    border: 1px solid rgba(198, 161, 91, .28);
+    border-radius: 30px;
+
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: .3px;
+
+    transition: all .25s ease;
+}
+
+.heera-ai-suggestions .suggestion:hover {
+    color: #090909;
+    background: var(--ai-gold-light);
+    border-color: var(--ai-gold-light);
+}
+
+/* =========================
+   INPUT SECTION
+========================= */
+
+.heera-ai-input-area {
+    padding: 14px 16px 13px;
+
+    background: #0c0c0b;
+    border-top: 1px solid var(--ai-border);
+}
+
+.heera-ai-chat-form {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.heera-ai-chat-form input {
+    width: 100%;
+    min-width: 0;
+    height: 47px;
+    padding: 0 15px;
+
+    color: var(--ai-ivory);
+    background: #171715;
+
+    border: 1px solid rgba(198, 161, 91, .19);
+    border-radius: 9px;
+
+    outline: none;
+
+    font-family: var(--body-font, Arial, sans-serif);
+    font-size: 12px;
+
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.heera-ai-chat-form input::placeholder {
+    color: #77736b;
+}
+
+.heera-ai-chat-form input:focus {
+    border-color: rgba(198, 161, 91, .65);
+    box-shadow: 0 0 0 3px rgba(198, 161, 91, .07);
+}
+
+.heera-ai-send {
+    width: 47px;
+    height: 47px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    color: #090909;
+    background: linear-gradient(
+        135deg,
+        #dfc18a,
+        #c6a15b
+    );
+
+    border: 1px solid rgba(255, 239, 204, .3);
+    border-radius: 9px;
+
+    transition: all .25s ease;
+}
+
+.heera-ai-send:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.heera-ai-send svg {
+    width: 19px;
+    height: 19px;
+}
+
+.heera-ai-disclaimer {
+    margin-top: 10px;
+
+    color: #777168;
+    text-align: center;
+
+    font-size: 8px;
+    line-height: 1.65;
+}
+
+/* =========================
+   FOCUS STATES
+========================= */
+
+.heera-ai-widget button:focus-visible,
+.heera-ai-widget input:focus-visible {
+    outline: 2px solid var(--ai-gold-light);
+    outline-offset: 3px;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .heera-ai-widget {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .heera-ai-panel {
+        width: min(400px, calc(100vw - 40px));
+        height: min(590px, calc(100dvh - 110px));
+        max-height: calc(100dvh - 110px);
+        bottom: 75px;
+    }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+    .heera-ai-widget {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .heera-ai-launcher {
+        min-height: 52px;
+        padding: 0 18px;
+        gap: 9px;
+    }
+
+    .heera-ai-launcher svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .heera-ai-launcher-label {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .heera-ai-panel {
+        position: fixed;
+
+        right: 9px;
+        bottom: 73px;
+
+        width: calc(100vw - 18px);
+        height: min(610px, calc(100dvh - 90px));
+        max-height: calc(100dvh - 90px);
+
+        border-radius: 14px;
+    }
+
+    .heera-ai-header {
+        min-height: 73px;
+        padding: 13px 14px;
+    }
+
+    .heera-ai-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .heera-ai-brand-info h3 {
+        font-size: 16px;
+    }
+
+    .heera-ai-messages {
+        padding: 17px 14px;
+    }
+
+    .heera-ai-welcome-content h4 {
+        font-size: 23px;
+    }
+
+    .heera-ai-suggestions {
+        padding: 11px 12px;
+        gap: 7px;
+    }
+
+    .heera-ai-suggestions .suggestion {
+        min-height: 30px;
+        padding: 7px 10px;
+        font-size: 8px;
+    }
+
+    .heera-ai-input-area {
+        padding: 11px 11px 10px;
+    }
+
+    .heera-ai-chat-form input,
+    .heera-ai-send {
+        height: 44px;
+    }
+
+    .heera-ai-send {
+        width: 44px;
+    }
+
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    .heera-ai-widget {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .heera-ai-panel {
+        right: 6px;
+        width: calc(100vw - 12px);
+    }
+
+    .heera-ai-welcome-content h4 {
+        font-size: 21px;
+    }
+
+    .heera-ai-welcome-content p {
+        font-size: 11px;
+    }
+
+    .heera-ai-suggestions .suggestion {
+        padding: 6px 8px;
+        font-size: 8px;
+    }
+
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .heera-ai-widget *,
+    .heera-ai-widget *::before,
+    .heera-ai-widget *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
