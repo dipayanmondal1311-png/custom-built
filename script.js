@@ -625,3 +625,76 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* ==========================================
+   PREWEDDING — SCROLL RESPONSIVE BACKGROUND
+   SCROLL DOWN = ZOOM OUT
+   SCROLL UP = ZOOM IN
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const preweddingBackground = document.querySelector(
+        ".prewedding-shared-bg"
+    );
+
+    if (!preweddingBackground) return;
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+    if (reducedMotion.matches) return;
+
+    let ticking = false;
+
+    function updatePreweddingBackgroundZoom() {
+
+        const rect = preweddingBackground.getBoundingClientRect();
+
+        const viewportHeight = window.innerHeight;
+
+        const totalDistance = viewportHeight + rect.height;
+
+        const progress = Math.max(
+            0,
+            Math.min(
+                1,
+                (viewportHeight - rect.top) / totalDistance
+            )
+        );
+
+        // Start zoom: 120%
+        // End zoom: 100%
+        const zoom = 120 - (progress * 20);
+
+        preweddingBackground.style.setProperty(
+            "--prewedding-bg-size",
+            `${zoom.toFixed(2)}%`
+        );
+
+        ticking = false;
+    }
+
+    function requestZoomUpdate() {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(
+                updatePreweddingBackgroundZoom
+            );
+
+            ticking = true;
+        }
+    }
+
+    window.addEventListener("scroll", requestZoomUpdate, {
+        passive: true
+    });
+
+    window.addEventListener("resize", requestZoomUpdate);
+
+    updatePreweddingBackgroundZoom();
+
+});
+
+
