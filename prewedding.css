@@ -646,14 +646,15 @@
 
     /* MOBILE SHARED BACKGROUND */
 
-    .prewedding-shared-bg::before {
-        background-attachment: scroll;
-        background-position: center;
-    }
+.prewedding-shared-bg::before {
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
 
-    .prewedding-background-overlay {
-        background: rgba(5, 5, 5, 0.88);
-    }
+.prewedding-background-overlay {
+    background: rgba(5, 5, 5, 0.88);
+}
 
 
     /* COMMON */
