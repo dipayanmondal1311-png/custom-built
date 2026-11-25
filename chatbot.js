@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // PRICING AND PACKAGES
         // ------------------------------------------
 
-        const asksPrice = has(
+        const asksPrice = (has(
             "price",
             "pricing",
             "cost",
@@ -128,12 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "packages",
             "দাম",
             "টাকা"
-        );
-
-        if (asksPrice) {
-
-            // General starting price enquiry
-if (has(
     "starting price",
     "starts from",
     "start from",
