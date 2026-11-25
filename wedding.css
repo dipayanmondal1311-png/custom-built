@@ -525,59 +525,6 @@ a { color: inherit; text-decoration: none; }
 
 
 
-/* =========================================================
-   WEDDING PAGE — SHARED TRANSPARENT SECTIONS
-   Background visible across all content sections
-========================================================= */
-
-/* Make all content sections transparent */
-.wedding-introduction,
-.wedding-types-section,
-.wedding-gallery-section,
-.wedding-approach-section,
-.wedding-cta-section {
-    background: transparent !important;
-}
-
-/* Keep shared background section transparent too */
-.wedding-story-background {
-    background: transparent !important;
-}
-
-/* Shared dark overlay */
-.wedding-fixed-background-overlay {
-    background: rgba(0, 0, 0, 0.72) !important;
-}
-
-/* Gallery cards should remain visible over background */
-.wedding-gallery-item {
-    background: rgba(15, 15, 15, 0.45);
-}
-
-/* Approach cards */
-.wedding-approach-card {
-    background: rgba(12, 12, 12, 0.65);
-}
-
-/* CTA overlay */
-.wedding-cta-overlay {
-    background: rgba(0, 0, 0, 0.65);
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-    .wedding-introduction,
-    .wedding-types-section,
-    .wedding-gallery-section,
-    .wedding-approach-section,
-    .wedding-cta-section,
-    .wedding-story-background {
-        background: transparent !important;
-    }
-}
 
 
 
