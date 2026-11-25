@@ -804,3 +804,75 @@
         display: none;
     }
 }
+
+
+/* BLUR EXISTING BACKGROUND */
+
+.heera-chatbot-main {
+    position: relative;
+    isolation: isolate;
+}
+
+.heera-chatbot-shell {
+    position: relative;
+    z-index: 1;
+}
+
+.heera-chatbot-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: inherit;
+    filter: blur(5px);
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+
+    .heera-chatbot-main::before {
+        filter: blur(4px);
+    }
+
+}
+
+
+
+/* MOBILE BACKGROUND BLUR */
+
+@media (max-width: 600px) {
+
+    .heera-chatbot-main {
+        position: relative;
+        isolation: isolate;
+    }
+
+    .heera-chatbot-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background:
+            linear-gradient(
+                rgba(8, 8, 8, 0.72),
+                rgba(8, 8, 8, 0.85)
+            ),
+            url("mimages/chatbot-bg-mobile.png");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        filter: blur(4px);
+        transform: scale(1.03);
+
+        z-index: -1;
+    }
+
+    .heera-chatbot-shell {
+        position: relative;
+        z-index: 1;
+    }
+
+}
