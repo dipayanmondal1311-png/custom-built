@@ -663,9 +663,9 @@ document.addEventListener("DOMContentLoaded", () => {
             )
         );
 
-        // Start zoom: 120%
-        // End zoom: 100%
-        const zoom = 120 - (progress * 20);
+        // Start zoom: 100%
+        // End zoom: 140%
+       const zoom = 100 + (progress * 40);
 
         preweddingBackground.style.setProperty(
             "--prewedding-bg-size",
