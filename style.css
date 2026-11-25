@@ -8190,61 +8190,120 @@ body.contact-page .site-header .nav-logo .brand-tagline {
     -webkit-font-smoothing: antialiased;
 }
 
-/* =========================
-   FLOATING LAUNCHER
-========================= */
+/* =========================================
+   HEERA AI — PREMIUM GOLD MASCOT LAUNCHER
+========================================= */
 
 .heera-ai-launcher {
     position: relative;
+    width: 92px;
+    height: 92px;
+    padding: 7px;
 
-    min-height: 58px;
-    padding: 0 23px;
-
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 2px;
 
-    color: #090909;
-    background: linear-gradient(
-        135deg,
-        #e0c58e 0%,
-        #c6a15b 48%,
-        #a9813e 100%
-    );
+    overflow: hidden;
+    cursor: pointer;
 
-    border: 1px solid rgba(255, 239, 204, .45);
-    border-radius: 50px;
+    color: #f5d98c;
+    background:
+        radial-gradient(circle at 35% 20%,
+            #302719 0%,
+            #11100d 48%,
+            #050505 100%);
+
+    border: 1.5px solid rgba(226, 190, 105, .85);
+    border-radius: 50%;
 
     box-shadow:
-        0 8px 30px rgba(0, 0, 0, .42),
-        inset 0 1px 0 rgba(255, 255, 255, .25);
+        0 0 0 3px rgba(198, 161, 91, .10),
+        0 8px 28px rgba(0, 0, 0, .65),
+        0 0 24px rgba(198, 161, 91, .25),
+        inset 0 1px 8px rgba(255, 229, 164, .22);
 
     transition:
-        transform .3s ease,
-        box-shadow .3s ease,
-        filter .3s ease;
+        transform .35s ease,
+        box-shadow .35s ease,
+        filter .35s ease;
+}
+
+.heera-ai-launcher::before {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border: 1px solid rgba(255, 226, 153, .25);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 .heera-ai-launcher:hover {
-    transform: translateY(-3px);
-    filter: brightness(1.06);
+    transform: translateY(-5px) scale(1.045);
+    filter: brightness(1.12);
 
     box-shadow:
-        0 12px 35px rgba(0, 0, 0, .5),
-        0 0 25px rgba(198, 161, 91, .16);
+        0 0 0 4px rgba(198, 161, 91, .12),
+        0 12px 35px rgba(0, 0, 0, .7),
+        0 0 32px rgba(198, 161, 91, .38);
 }
 
-.heera-ai-launcher svg {
-    width: 22px;
-    height: 22px;
+.heera-ai-mascot {
+    display: block;
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, .5));
 }
 
 .heera-ai-launcher-label {
-    font-size: 10px;
+    color: #f3d58d;
+    font-family: var(--body-font, Arial, sans-serif);
+    font-size: 7px;
     font-weight: 700;
-    letter-spacing: 1.8px;
+    letter-spacing: 1.2px;
+    line-height: 1;
     text-transform: uppercase;
+}
+
+/* Gentle floating motion */
+@keyframes heeraMascotFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+.heera-ai-launcher .heera-ai-mascot {
+    animation: heeraMascotFloat 3s ease-in-out infinite;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .heera-ai-widget {
+        right: 16px;
+        bottom: 18px;
+    }
+
+    .heera-ai-launcher {
+        width: 78px;
+        height: 78px;
+    }
+
+    .heera-ai-mascot {
+        width: 55px;
+        height: 55px;
+    }
+
+    .heera-ai-launcher-label {
+        font-size: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heera-ai-launcher .heera-ai-mascot {
+        animation: none;
+    }
 }
 
 /* =========================
