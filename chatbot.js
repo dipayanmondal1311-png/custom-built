@@ -132,6 +132,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (asksPrice) {
 
+            // General starting price enquiry
+if (has(
+    "starting price",
+    "starts from",
+    "start from",
+    "starting cost",
+    "minimum price",
+    "minimum cost",
+    "starting rate",
+    "start at",
+    "price start",
+    "prices start",
+    "beginning price"
+)) {
+    return "Our photography packages start from INR 10,000/-. The final price depends on the type of event, coverage duration, location and your specific requirements. Feel free to contact HEERA Photography for a personalised quote.";
+}
+
             // Pre-wedding pricing
             if (has(
                 "pre wedding",
