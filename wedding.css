@@ -1056,3 +1056,25 @@ body::before {
     transform: none;
   }
 }
+
+
+
+/* BACKGROUND BLUR */
+body::before {
+    filter: blur(4px);
+    transform: scale(1.08);
+    transition: transform 0.15s ease-out;
+}
+
+/* Prevent blur edges from showing */
+body::before {
+    inset: -20px;
+}
+
+/* Stronger zoom range controlled by scrolling */
+body::before {
+    background-size: cover;
+}
+
+
+
