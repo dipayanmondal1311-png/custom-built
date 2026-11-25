@@ -258,20 +258,22 @@ if (has(
             return "Every wedding has a unique story. From emotional rituals to joyful celebrations, wedding photography helps preserve the moments you will want to revisit for years. Contact us to discuss your wedding plans.";
         }
 
-        // ------------------------------------------
-        // SERVICES
-        // ------------------------------------------
+       // ==========================================
+// SERVICES
+// ==========================================
 
-        if (has(
-            "service",
-            "services",
-            "photography",
-            "what do you offer",
-            "what do you do"
-        )) {
-            return "Our photography services include:\n\n• Wedding Photography\n• Candid Photography\n• Pre-Wedding Shoots\n• Cinematic Wedding Films\n• Event Photography\n\nWhich service would you like to know more about?";
-        }
-
+if (has(
+    "service",
+    "services",
+    "photography",
+    "what do you offer",
+    "what do you do",
+    "shoots",
+    "photoshoot",
+    "photoshoots"
+)) {
+    return "HEERA Photography offers a wide range of photography and videography services:\n\n📸 Wedding Photography & Shoots:\n• Wedding Shoot\n• Cinematic Wedding Shoot\n• Destination Wedding Shoot\n• Vintage Wedding Shoot\n• Wedding Anniversary Shoot\n• Post Wedding Shoot\n• Candid Wedding Shoot\n• Traditional Wedding Shoot\n• Pre Wedding Shoot\n• Teaser Shoot\n\n📸 Other Photography & Shoots:\n• Drone Shoot\n• Newborn Shoot\n• Travel Shoot\n• Candid Photography\n\n🎥 Additional Services:\n• Albums\n• Traditional Videography\n• Cinematography\n\n🌿 Lifestyle Photoshoot:\n• Maternity Shoot\n• Portrait Shoot\n\n🏢 Commercial Photoshoot:\n• Fashion Shoot\n\nWhich service are you interested in? I'd be happy to help you with more details!";
+}
         // ------------------------------------------
         // PORTFOLIO AND GALLERY
         // ------------------------------------------
