@@ -1133,6 +1133,214 @@
 <script src="script.js"></script>
 
 
+<!-- ==========================================
+     HEERA AI ASSISTANT — CHAT WIDGET
+========================================== -->
+
+<div class="heera-ai-widget">
+
+    <!-- Floating Chat Button -->
+    <button
+        class="heera-ai-launcher"
+        id="heera-ai-launcher"
+        type="button"
+        aria-label="Open HEERA AI Assistant"
+        aria-expanded="false"
+        aria-controls="heera-ai-panel"
+    >
+        <svg viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.7"
+             stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true">
+            <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5
+                     8.4 8.4 0 0 1-4-.99L3 21l1.99-5.5
+                     A8.4 8.4 0 0 1 4 11.5
+                     8.5 8.5 0 0 1 12.5 3
+                     8.5 8.5 0 0 1 21 11.5Z"/>
+            <path d="M8 12h.01M12 12h.01M16 12h.01"/>
+        </svg>
+        <span class="heera-ai-launcher-label">Ask HEERA</span>
+    </button>
+
+
+    <!-- Chat Window -->
+    <section
+        class="heera-ai-panel"
+        id="heera-ai-panel"
+        aria-label="HEERA AI Assistant chat"
+        aria-hidden="true"
+        hidden
+    >
+
+        <!-- Chat Header -->
+        <div class="heera-ai-header">
+
+            <div class="heera-ai-brand">
+
+                <div class="heera-ai-avatar" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="1.5"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="7" width="16" height="13" rx="4"/>
+                        <path d="M12 3v4M9 12h.01M15 12h.01"/>
+                        <path d="M9 16h6M2 12h2M20 12h2"/>
+                    </svg>
+                </div>
+
+                <div class="heera-ai-brand-info">
+                    <h3>HEERA AI Assistant</h3>
+                    <p>
+                        <span class="heera-ai-status-dot"></span>
+                        Here to assist you
+                    </p>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="heera-ai-close"
+                id="heera-ai-close"
+                aria-label="Close chat"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <!-- Chat Messages -->
+        <div
+            class="heera-ai-messages"
+            id="ai-messages"
+            aria-live="polite"
+            aria-label="Conversation"
+        >
+
+            <!-- Welcome Message -->
+            <div class="heera-ai-welcome">
+
+                <div class="heera-ai-welcome-avatar">
+                    <svg viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="1.5"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="7" width="16" height="13" rx="4"/>
+                        <path d="M12 3v4M9 12h.01M15 12h.01"/>
+                        <path d="M9 16h6M2 12h2M20 12h2"/>
+                    </svg>
+                </div>
+
+                <div class="heera-ai-welcome-content">
+                    <span class="heera-ai-welcome-label">
+                        WELCOME TO HEERA
+                    </span>
+
+                    <h4>
+                        Every moment deserves
+                        to be remembered.
+                    </h4>
+
+                    <p>
+                        I'm HEERA AI Assistant. I can help you
+                        explore our photography services, wedding
+                        packages, bookings and more.
+                    </p>
+
+                    <span class="heera-ai-prompt">
+                        How can I help you today?
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Suggested Questions -->
+        <div class="heera-ai-suggestions">
+
+            <button
+                type="button"
+                class="suggestion"
+                data-message="What photography services do you offer?"
+            >
+                Our Services
+            </button>
+
+            <button
+                type="button"
+                class="suggestion"
+                data-message="Tell me about your wedding photography packages."
+            >
+                Wedding Packages
+            </button>
+
+            <button
+                type="button"
+                class="suggestion"
+                data-message="How can I book a photography session?"
+            >
+                Book a Session
+            </button>
+
+            <button
+                type="button"
+                class="suggestion"
+                data-message="How can I contact Heera Photography?"
+            >
+                Contact Us
+            </button>
+
+        </div>
+
+
+        <!-- Message Input -->
+        <div class="heera-ai-input-area">
+
+            <form class="heera-ai-chat-form" id="ai-chat-form">
+
+                <input
+                    type="text"
+                    id="ai-chat-input"
+                    placeholder="Ask us anything..."
+                    autocomplete="off"
+                    maxlength="1000"
+                    aria-label="Type your question"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="heera-ai-send"
+                    id="ai-send-button"
+                    aria-label="Send message"
+                >
+                    <svg viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="1.8"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2 11 13"/>
+                        <path d="m22 2-7 20-4-9-9-4 20-7Z"/>
+                    </svg>
+                </button>
+
+            </form>
+
+            <p class="heera-ai-disclaimer">
+                HEERA AI Assistant provides general information.
+                Please confirm final pricing and availability
+                with our team.
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- HEERA AI Assistant JavaScript -->
+<script src="chatbot.js"></script>
+
+
 </body>
 
 </html>
