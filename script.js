@@ -697,4 +697,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/* ==========================================
+   WEDDING — SCROLL RESPONSIVE BACKGROUND ZOOM
+   SCROLL DOWN = ZOOM IN
+   SCROLL UP = ZOOM OUT
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const weddingIntro = document.querySelector(
+        ".wedding-introduction"
+    );
+
+    const weddingCTA = document.querySelector(
+        ".wedding-cta-section"
+    );
+
+    if (!weddingIntro || !weddingCTA) return;
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+    if (reducedMotion.matches) return;
+
+    let ticking = false;
+
+    function updateWeddingBackgroundZoom() {
+
+        const introRect = weddingIntro.getBoundingClientRect();
+        const ctaRect = weddingCTA.getBoundingClientRect();
+
+        const startPosition = introRect.top + window.scrollY;
+        const endPosition = ctaRect.bottom + window.scrollY;
+
+        const currentPosition = window.scrollY;
+
+        const totalDistance = endPosition - startPosition;
+
+        if (totalDistance <= 0) return;
+
+        const progress = Math.max(
+            0,
+            Math.min(
+                1,
+                (currentPosition - startPosition) / totalDistance
+            )
+        );
+
+        // Start: 100%
+        // End: 120%
+        const zoom = 1 + (progress * 0.20);
+
+        document.body.style.setProperty(
+            "--wedding-bg-zoom",
+            zoom.toFixed(3)
+        );
+
+        ticking = false;
+    }
+
+    function requestZoomUpdate() {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(
+                updateWeddingBackgroundZoom
+            );
+
+            ticking = true;
+        }
+    }
+
+    window.addEventListener("scroll", requestZoomUpdate, {
+        passive: true
+    });
+
+    window.addEventListener("resize", requestZoomUpdate);
+
+    updateWeddingBackgroundZoom();
+
+});
 
