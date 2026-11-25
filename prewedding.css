@@ -157,7 +157,6 @@
     }
 }
 
-
 /* ==========================================
    SHARED BACKGROUND FOR CONTENT SECTIONS
 ========================================== */
@@ -168,40 +167,39 @@
     background: #080808;
 }
 
-/* The single static background for all sections */
+/* SHARED BACKGROUND IMAGE */
 
 .prewedding-shared-bg::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: -2;
+    z-index: 0;
+    pointer-events: none;
 
     background-image: url('images/prewedding-story-background.jpg');
     background-position: center center;
     background-size: var(--prewedding-bg-size, 120%) auto;
     background-repeat: no-repeat;
+
     background-attachment: fixed;
 }
 
-/* DARK OVERLAY — CONTENT READABILITY */
+/* DARK OVERLAY */
 
 .prewedding-background-overlay {
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 1;
+    pointer-events: none;
 
-    background:
-        linear-gradient(
-            rgba(5, 5, 5, 0.82),
-            rgba(5, 5, 5, 0.86)
-        );
+    background: rgba(5, 5, 5, 0.86);
 }
 
-/* Ensure all sections sit above the background layers */
+/* CONTENT ABOVE BACKGROUND */
 
 .prewedding-shared-bg > section {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 
