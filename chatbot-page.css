@@ -12,20 +12,28 @@
 
 /* PAGE LAYOUT */
 
+/* PAGE BACKGROUND — AI ROBOTICS */
+
 .heera-chatbot-main {
     min-height: calc(100vh - 100px);
     padding: 150px 5% 60px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     background:
-        radial-gradient(
-            ellipse at 15% 50%,
-            rgba(198,161,91,.08),
-            transparent 45%
+        linear-gradient(
+            rgba(8, 8, 8, 0.72),
+            rgba(8, 8, 8, 0.82)
         ),
-        #080808;
+        url("images/chatbot-bg-desktop.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-attachment: scroll;
 }
 
 .heera-chatbot-shell {
@@ -584,12 +592,27 @@
    RESPONSIVE — MOBILE
 ========================================== */
 
-@media (max-width: 600px) {
+
+
+   @media (max-width: 600px) {
 
     .heera-chatbot-main {
-    padding: 120px 14px 35px;
-    min-height: auto;
-}
+        padding: 120px 14px 35px;
+        min-height: auto;
+
+        background:
+            linear-gradient(
+                rgba(8, 8, 8, 0.72),
+                rgba(8, 8, 8, 0.85)
+            ),
+            url("images/chatbot-bg-mobile.png");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
 
     .heera-chatbot-shell {
         gap: 25px;
