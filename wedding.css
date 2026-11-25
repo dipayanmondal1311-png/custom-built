@@ -447,3 +447,80 @@ a { color: inherit; text-decoration: none; }
     }
 }
 
+
+
+/* =========================================================
+   KEN BURNS EFFECT — WEDDING PAGE BACKGROUND
+========================================================= */
+
+.wedding-story-background {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.wedding-fixed-background-image {
+    position: absolute;
+    inset: -5%;
+    z-index: -2;
+
+    background-image: url('images/wedding-story-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    transform: scale(1);
+    animation: weddingKenBurns 30s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes weddingKenBurns {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+/* Overlay */
+.wedding-fixed-background-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.72);
+}
+
+/* =========================================================
+   MOBILE OPTIMIZATION
+========================================================= */
+
+@media (max-width: 768px) {
+    .wedding-fixed-background-image {
+        background-attachment: scroll;
+        animation-duration: 35s;
+        inset: -3%;
+    }
+
+    @keyframes weddingKenBurns {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.12);
+        }
+    }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    .wedding-fixed-background-image {
+        animation: none;
+        transform: none;
+    }
+}
+
+
