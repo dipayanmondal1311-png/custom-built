@@ -1233,28 +1233,78 @@
 
 <div class="heera-ai-widget">
 
-    <!-- Floating Chat Button -->
-    <button
-        class="heera-ai-launcher"
-        id="heera-ai-launcher"
-        type="button"
-        aria-label="Open HEERA AI Assistant"
-        aria-expanded="false"
-        aria-controls="heera-ai-panel"
-    >
-        <svg viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1.7"
-             stroke-linecap="round" stroke-linejoin="round"
-             aria-hidden="true">
-            <path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5
-                     8.4 8.4 0 0 1-4-.99L3 21l1.99-5.5
-                     A8.4 8.4 0 0 1 4 11.5
-                     8.5 8.5 0 0 1 12.5 3
-                     8.5 8.5 0 0 1 21 11.5Z"/>
-            <path d="M8 12h.01M12 12h.01M16 12h.01"/>
-        </svg>
-        <span class="heera-ai-launcher-label">Ask HEERA</span>
-    </button>
+   
+<!-- Premium HEERA AI Floating Button -->
+<button
+    class="heera-ai-launcher"
+    id="heera-ai-launcher"
+    type="button"
+    aria-label="Open HEERA AI Assistant"
+    aria-expanded="false"
+    aria-controls="heera-ai-panel"
+>
+    <svg class="heera-ai-mascot"
+         viewBox="0 0 120 120"
+         xmlns="http://www.w3.org/2000/svg"
+         aria-hidden="true">
+
+        <defs>
+            <linearGradient id="heeraGold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fff0b0"/>
+                <stop offset="35%" stop-color="#e8c56f"/>
+                <stop offset="70%" stop-color="#b88732"/>
+                <stop offset="100%" stop-color="#f5d98c"/>
+            </linearGradient>
+
+            <linearGradient id="heeraFace" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#29251e"/>
+                <stop offset="100%" stop-color="#080808"/>
+            </linearGradient>
+        </defs>
+
+        <!-- Antennas -->
+        <path d="M29 34 V17 M91 34 V17"
+              stroke="url(#heeraGold)" stroke-width="5"
+              stroke-linecap="round"/>
+
+        <!-- Side headphones -->
+        <path d="M27 39 C12 39 9 53 9 67 C9 81 16 91 29 91 L35 82 V48 Z"
+              fill="url(#heeraGold)" stroke="#f8df9b" stroke-width="1.5"/>
+        <path d="M93 39 C108 39 111 53 111 67 C111 81 104 91 91 91 L85 82 V48 Z"
+              fill="url(#heeraGold)" stroke="#f8df9b" stroke-width="1.5"/>
+
+        <!-- Main mascot body -->
+        <path d="M60 9 C87 9 106 27 106 54
+                 C106 76 94 91 77 98
+                 L83 111 L58 101
+                 C32 103 14 84 14 57
+                 C14 29 33 9 60 9 Z"
+              fill="url(#heeraGold)"
+              stroke="#ffe8a5"
+              stroke-width="1.5"/>
+
+        <!-- Dark face -->
+        <rect x="23" y="25" width="74" height="62"
+              rx="29" fill="url(#heeraFace)"
+              stroke="#f4d88d" stroke-width="2.5"/>
+
+        <!-- Eyes -->
+        <path d="M39 53 Q48 43 57 53"
+              fill="none" stroke="#f6d77e"
+              stroke-width="5" stroke-linecap="round"/>
+        <path d="M63 53 Q72 43 81 53"
+              fill="none" stroke="#f6d77e"
+              stroke-width="5" stroke-linecap="round"/>
+
+        <!-- Smile -->
+        <path d="M50 66 Q60 77 70 66"
+              fill="none" stroke="#f6d77e"
+              stroke-width="3.5" stroke-linecap="round"/>
+    </svg>
+
+    <span class="heera-ai-launcher-label">HEERA AI</span>
+</button>
+
 
 
     <!-- Chat Window -->
