@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // PRICING AND PACKAGES
         // ------------------------------------------
 
-        const asksPrice = (has(
+        if (has(
             "price",
             "pricing",
             "cost",
