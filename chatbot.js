@@ -186,8 +186,8 @@ if (asksPrice) {
     }
 
     // General pricing
-    return "Our photography packages depend on your event, location, coverage duration, and requirements. Please contact HEERA Photography for the latest pricing and a personalised quote.";
-}
+    return "Our photography packages start from INR 10,000/-. The final price depends on the type of event, coverage duration, location and your specific requirements. Feel free to contact HEERA Photography for a personalised quote.";
+    }
         // ------------------------------------------
         // BOOKING AND AVAILABILITY
         // ------------------------------------------
