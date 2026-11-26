@@ -1169,18 +1169,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 /* ==========================================
    OTHER SERVICES — SCROLL RESPONSIVE BACKGROUND
 ========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const otherServicesBackground = document.querySelector(
+    const shared = document.querySelector(
         ".other-services-shared-bg"
     );
 
-    if (!otherServicesBackground) return;
+    if (!shared) return;
 
     const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
@@ -1190,25 +1189,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let ticking = false;
 
-    function updateOtherServicesBackgroundZoom() {
+    function updateOtherServicesZoom() {
 
-        const rect = otherServicesBackground.getBoundingClientRect();
+        const rect = shared.getBoundingClientRect();
 
-        const viewportHeight = window.innerHeight;
-
-        const totalDistance = viewportHeight + rect.height;
+        const total = window.innerHeight + rect.height;
 
         const progress = Math.max(
             0,
             Math.min(
                 1,
-                (viewportHeight - rect.top) / totalDistance
+                (window.innerHeight - rect.top) / total
             )
         );
 
         const zoom = 100 + (progress * 40);
 
-        otherServicesBackground.style.setProperty(
+        shared.style.setProperty(
             "--other-services-bg-size",
             `${zoom.toFixed(2)}%`
         );
@@ -1216,24 +1213,22 @@ document.addEventListener("DOMContentLoaded", () => {
         ticking = false;
     }
 
-    function requestZoomUpdate() {
+    function requestUpdate() {
 
         if (!ticking) {
 
-            window.requestAnimationFrame(
-                updateOtherServicesBackgroundZoom
-            );
+            requestAnimationFrame(updateOtherServicesZoom);
 
             ticking = true;
         }
     }
 
-    window.addEventListener("scroll", requestZoomUpdate, {
+    window.addEventListener("scroll", requestUpdate, {
         passive: true
     });
 
-    window.addEventListener("resize", requestZoomUpdate);
+    window.addEventListener("resize", requestUpdate);
 
-    updateOtherServicesBackgroundZoom();
+    updateOtherServicesZoom();
 
 });
