@@ -962,5 +962,209 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+/* ==========================================
+   PORTRAIT PAGE — REVEAL & SCROLL BACKGROUND
+   APPEND TO EXISTING GLOBAL script.js
+========================================== */
 
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* PORTRAIT REVEAL ANIMATIONS */
+
+    const portraitSelectors = [
+
+        ".portrait-hero-content",
+        ".portrait-intro-inner",
+        ".portrait-section-heading",
+        ".portrait-perspective-content",
+        ".portrait-perspective-item",
+        ".portrait-approach-intro",
+        ".portrait-cta"
+
+    ];
+
+
+    portraitSelectors.forEach(selector => {
+
+        document.querySelectorAll(selector).forEach(el => {
+
+            el.classList.add("reveal");
+
+        });
+
+    });
+
+
+    /* PORTRAIT STAGGER */
+
+    const portraitStaggerSelectors = [
+
+        ".portrait-style-card",
+        ".portrait-gallery-item",
+        ".portrait-approach-card"
+
+    ];
+
+
+    portraitStaggerSelectors.forEach(selector => {
+
+        document.querySelectorAll(selector).forEach((el, index) => {
+
+            el.classList.add("reveal");
+
+            el.style.setProperty(
+                "--reveal-delay",
+                `${Math.min(index * 100, 500)}ms`
+            );
+
+        });
+
+    });
+
+
+    /* PORTRAIT REVEAL OBSERVER */
+
+    const portraitRevealElements = document.querySelectorAll(
+        ".portrait-page .reveal"
+    );
+
+
+    if ("IntersectionObserver" in window) {
+
+
+        const portraitRevealObserver = new IntersectionObserver(
+
+            (entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12,
+
+                rootMargin: "0px 0px -45px 0px"
+            }
+
+        );
+
+
+        portraitRevealElements.forEach(el => {
+
+            portraitRevealObserver.observe(el);
+
+        });
+
+
+    } else {
+
+
+        portraitRevealElements.forEach(el => {
+
+            el.classList.add("visible");
+
+        });
+
+    }
+
+
+    /* PORTRAIT SCROLL RESPONSIVE BACKGROUND */
+
+    const shared = document.querySelector(".portrait-shared-bg");
+
+
+    if (!shared) return;
+
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+
+    if (reducedMotion.matches) return;
+
+
+    let ticking = false;
+
+
+    function updatePortraitZoom() {
+
+
+        const rect = shared.getBoundingClientRect();
+
+
+        const total = window.innerHeight + rect.height;
+
+
+        const progress = Math.max(
+
+            0,
+
+            Math.min(
+
+                1,
+
+                (window.innerHeight - rect.top) / total
+
+            )
+
+        );
+
+
+        const zoom = 100 + (progress * 40);
+
+
+        shared.style.setProperty(
+
+            "--portrait-bg-size",
+
+            `${zoom.toFixed(2)}%`
+
+        );
+
+
+        ticking = false;
+
+    }
+
+
+    function requestUpdate() {
+
+
+        if (!ticking) {
+
+            requestAnimationFrame(updatePortraitZoom);
+
+            ticking = true;
+
+        }
+
+    }
+
+
+    window.addEventListener("scroll", requestUpdate, {
+
+        passive: true
+
+    });
+
+
+    window.addEventListener("resize", requestUpdate);
+
+
+    updatePortraitZoom();
+
+
+});
 
