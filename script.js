@@ -180,7 +180,6 @@ staggerGroups.forEach(selector => {
         });
     });
 });
-
 /* WEDDING CARD STAGGER */
 
 const weddingStaggerSelectors = [
@@ -189,6 +188,17 @@ const weddingStaggerSelectors = [
     ".wedding-gallery-item",
     ".wedding-approach-card"
 ];
+
+weddingStaggerSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach((card, index) => {
+        card.classList.add("reveal");
+
+        card.style.setProperty(
+            "--reveal-delay",
+            `${Math.min(index * 100, 500)}ms`
+        );
+    });
+});
 /* Intersection Observer */
 const revealElements = document.querySelectorAll(".reveal");
 
