@@ -145,6 +145,13 @@ const revealSelectors = [
     ".wedding-gallery-container",
     ".wedding-approach-container",
     ".wedding-cta-content",
+   /* EVENTS */
+".events-hero-content",
+".events-intro-section",
+".events-type-item",
+".events-gallery-item",
+".events-approach-card",
+".events-cta-content",
     /* FOOTERS */
     ".footer-column",
     ".footer-main"
@@ -166,6 +173,9 @@ const staggerGroups = [
     ".values-grid",
     ".client-reviews-grid",
     ".statistics-grid"
+   ".events-types-grid",
+".events-gallery-grid",
+".events-approach-grid",
 ];
 
 staggerGroups.forEach(selector => {
@@ -801,6 +811,70 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", requestZoomUpdate);
 
     updateWeddingBackgroundZoom();
+
+});
+
+
+/* ==========================================
+   EVENTS — SHARED BACKGROUND SCROLL ZOOM
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const eventsBackground = document.querySelector(
+        ".events-content-background"
+    );
+
+    if (!eventsBackground) return;
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+    if (reducedMotion.matches) return;
+
+    let ticking = false;
+
+    function updateEventsBackgroundZoom() {
+
+        const rect = eventsBackground.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        const totalDistance = viewportHeight + rect.height;
+
+        const progress = Math.max(
+            0,
+            Math.min(
+                1,
+                (viewportHeight - rect.top) / totalDistance
+            )
+        );
+
+        const zoom = 1 + (progress * 0.12);
+
+        eventsBackground.style.setProperty(
+            "--events-bg-zoom",
+            zoom.toFixed(3)
+        );
+
+        ticking = false;
+    }
+
+    function requestZoomUpdate() {
+
+        if (!ticking) {
+            window.requestAnimationFrame(updateEventsBackgroundZoom);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener("scroll", requestZoomUpdate, {
+        passive: true
+    });
+
+    window.addEventListener("resize", requestZoomUpdate);
+
+    updateEventsBackgroundZoom();
 
 });
 
