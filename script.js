@@ -175,7 +175,8 @@ const staggerGroups = [
     ".values-grid",
     ".client-reviews-grid",
     ".statistics-grid",
-   ".other-services-style-grid"
+   ".other-services-style-grid",
+   ".other-services-gallery"
 ];
 
 staggerGroups.forEach(selector => {
