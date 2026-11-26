@@ -374,7 +374,7 @@ a {
   padding: 26px;
   border: 1px solid var(--wedding-border);
   background: rgba(10,10,10,.5);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(0px);
 }
 
 .wedding-highlight-number {
@@ -1046,7 +1046,7 @@ body::before {
 
 /* BACKGROUND BLUR */
 body::before {
-    filter: blur(4px);
+    filter: blur(0px);
     transform: scale(1.08);
     transition: transform 0.15s ease-out;
 }
