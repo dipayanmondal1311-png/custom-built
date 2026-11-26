@@ -1175,11 +1175,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const shared = document.querySelector(
+    const otherServicesBackground = document.querySelector(
         ".other-services-shared-bg"
     );
 
-    if (!shared) return;
+    if (!otherServicesBackground) return;
 
     const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
@@ -1189,23 +1189,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let ticking = false;
 
-    function updateOtherServicesZoom() {
+    function updateOtherServicesBackgroundZoom() {
 
-        const rect = shared.getBoundingClientRect();
+        const rect = otherServicesBackground.getBoundingClientRect();
 
-        const total = window.innerHeight + rect.height;
+        const viewportHeight = window.innerHeight;
+
+        const totalDistance = viewportHeight + rect.height;
 
         const progress = Math.max(
             0,
             Math.min(
                 1,
-                (window.innerHeight - rect.top) / total
+                (viewportHeight - rect.top) / totalDistance
             )
         );
 
         const zoom = 100 + (progress * 40);
 
-        shared.style.setProperty(
+        otherServicesBackground.style.setProperty(
             "--other-services-bg-size",
             `${zoom.toFixed(2)}%`
         );
@@ -1213,22 +1215,24 @@ document.addEventListener("DOMContentLoaded", () => {
         ticking = false;
     }
 
-    function requestUpdate() {
+    function requestZoomUpdate() {
 
         if (!ticking) {
 
-            requestAnimationFrame(updateOtherServicesZoom);
+            window.requestAnimationFrame(
+                updateOtherServicesBackgroundZoom
+            );
 
             ticking = true;
         }
     }
 
-    window.addEventListener("scroll", requestUpdate, {
+    window.addEventListener("scroll", requestZoomUpdate, {
         passive: true
     });
 
-    window.addEventListener("resize", requestUpdate);
+    window.addEventListener("resize", requestZoomUpdate);
 
-    updateOtherServicesZoom();
+    updateOtherServicesBackgroundZoom();
 
 });
