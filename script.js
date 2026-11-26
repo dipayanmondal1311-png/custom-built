@@ -137,7 +137,14 @@ const revealSelectors = [
     ".map-heading",
     ".map-container",
     ".contact-cta-content",
-
+    /* WEDDING */
+    ".wedding-hero-content",
+    ".wedding-intro-container",
+    ".wedding-types-container",
+    ".wedding-story-content",
+    ".wedding-gallery-container",
+    ".wedding-approach-container",
+    ".wedding-cta-content",
     /* FOOTERS */
     ".footer-column",
     ".footer-main"
@@ -174,6 +181,14 @@ staggerGroups.forEach(selector => {
     });
 });
 
+/* WEDDING CARD STAGGER */
+
+const weddingStaggerSelectors = [
+    ".wedding-type-item",
+    ".wedding-story-highlight",
+    ".wedding-gallery-item",
+    ".wedding-approach-card"
+];
 /* Intersection Observer */
 const revealElements = document.querySelectorAll(".reveal");
 
