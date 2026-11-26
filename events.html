@@ -4,82 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events Photography | HEERA Photography</title>
-    <meta name="description" content="HEERA Photography captures corporate events, celebrations, cultural gatherings and unforgettable moments with timeless event photography.">
 
-    <!-- Google Fonts -->
+    <title>Events Photography | HEERA Photography</title>
+
+    <meta name="description" content="HEERA Photography captures corporate events, celebrations, cultural gatherings and unforgettable moments.">
+
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Events Page CSS -->
+    <!-- EVENTS CSS -->
     <link rel="stylesheet" href="events.css">
+
 </head>
 
 <body>
 
+
+<!-- =========================================
+     EVENTS PHOTOGRAPHY PAGE
+========================================== -->
+
+<main class="heera-events-page">
+
+
     <!-- =========================================
-         EVENTS PHOTOGRAPHY PAGE
+         01. HERO SECTION
+         DEDICATED BACKGROUND IMAGE
     ========================================== -->
 
-    <main class="heera-events-page">
+    <section class="events-hero">
+
+        <!-- HERO BACKGROUND IMAGE PLACEHOLDER -->
+
+        <div class="events-hero-background">
+
+            <img src="images/events-hero-placeholder.jpg"
+                 alt="Events photography background">
+
+        </div>
+
+        <div class="events-hero-overlay"></div>
+
+
+        <div class="events-hero-content reveal">
+
+            <span class="events-hero-eyebrow">
+                HEERA PHOTOGRAPHY
+            </span>
+
+            <h1>
+                Every Moment.<br>
+                Every Emotion.<br>
+                <span>Every Detail.</span>
+            </h1>
+
+            <p>
+                Capturing the energy, atmosphere and unforgettable
+                moments of every celebration.
+            </p>
+
+            <a href="#events-gallery" class="events-hero-button">
+                EXPLORE OUR WORK
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SHARED BACKGROUND FOR ALL SECTIONS
+         EXCEPT HERO AND FOOTER
+
+         BACKGROUND PLACEHOLDER WILL BE
+         IMPLEMENTED THROUGH CSS
+
+         ALL SECTIONS BELOW ARE INSIDE
+         THIS SHARED BACKGROUND WRAPPER
+    ========================================== -->
+
+    <div class="events-content-background">
 
 
         <!-- =========================================
-             01. EVENTS HERO SECTION
-        ========================================== -->
-
-        <section class="events-hero">
-
-            <!-- Dedicated Hero Background Placeholder -->
-            <div class="events-hero-background">
-                <img src="images/events-hero-placeholder.jpg"
-                     alt="Event photography hero background">
-            </div>
-
-            <div class="events-hero-overlay"></div>
-
-            <div class="events-hero-content reveal">
-
-                <span class="events-hero-eyebrow">
-                    HEERA PHOTOGRAPHY
-                </span>
-
-                <h1>
-                    Every Moment.<br>
-                    Every Emotion.<br>
-                    <span>Every Detail.</span>
-                </h1>
-
-                <p>
-                    Capturing the energy, atmosphere and unforgettable
-                    moments of every celebration.
-                </p>
-
-                <a href="#events-gallery" class="events-hero-button">
-                    EXPLORE OUR WORK
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             02. EVENTS INTRODUCTION
+             02. INTRODUCTION
         ========================================== -->
 
         <section class="events-intro-section reveal">
 
             <div class="events-intro-container">
 
+
                 <div class="events-intro-image">
 
                     <img src="images/events-intro-placeholder.jpg"
-                         alt="Event photographer capturing a memorable moment">
+                         alt="Event photography moment"
+                         loading="lazy">
 
                 </div>
+
 
                 <div class="events-intro-content">
 
@@ -106,18 +133,23 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
+
         <!-- =========================================
              03. TYPES OF EVENTS
-        ========================================== -->
+             TEXT ONLY
+             NO IMAGES
+    ========================================== -->
 
         <section class="events-types-section reveal">
 
             <div class="events-types-container">
+
 
                 <div class="events-types-heading">
 
@@ -138,110 +170,80 @@
                 </div>
 
 
-                <!-- EVENT CARD 01 -->
+                <div class="events-types-list">
 
-                <div class="events-type-item reveal">
 
-                    <div class="events-type-image">
-
-                        <img src="images/corporate-events-placeholder.jpg"
-                             alt="Corporate event photography">
-
-                    </div>
-
-                    <div class="events-type-content">
+                    <div class="events-type-item reveal">
 
                         <span class="events-type-number">01</span>
 
-                        <h3>Corporate Events</h3>
+                        <div class="events-type-content">
 
-                        <p>
-                            Conferences, seminars, brand launches,
-                            networking events and professional gatherings.
-                        </p>
+                            <h3>Corporate Events</h3>
 
-                    </div>
+                            <p>
+                                Conferences, seminars, brand launches,
+                                networking events and professional gatherings.
+                            </p>
 
-                </div>
-
-
-                <!-- EVENT CARD 02 -->
-
-                <div class="events-type-item reveal">
-
-                    <div class="events-type-image">
-
-                        <img src="images/private-celebrations-placeholder.jpg"
-                             alt="Private celebration photography">
+                        </div>
 
                     </div>
 
-                    <div class="events-type-content">
+
+                    <div class="events-type-item reveal">
 
                         <span class="events-type-number">02</span>
 
-                        <h3>Private Celebrations</h3>
+                        <div class="events-type-content">
 
-                        <p>
-                            Birthdays, anniversaries, parties and
-                            celebrations filled with unforgettable moments.
-                        </p>
+                            <h3>Private Celebrations</h3>
 
-                    </div>
+                            <p>
+                                Birthdays, anniversaries, parties and
+                                celebrations filled with unforgettable moments.
+                            </p>
 
-                </div>
-
-
-                <!-- EVENT CARD 03 -->
-
-                <div class="events-type-item reveal">
-
-                    <div class="events-type-image">
-
-                        <img src="images/cultural-events-placeholder.jpg"
-                             alt="Cultural event photography">
+                        </div>
 
                     </div>
 
-                    <div class="events-type-content">
+
+                    <div class="events-type-item reveal">
 
                         <span class="events-type-number">03</span>
 
-                        <h3>Cultural Events</h3>
+                        <div class="events-type-content">
 
-                        <p>
-                            Festivals, performances, cultural programmes
-                            and traditions captured through storytelling.
-                        </p>
+                            <h3>Cultural Events</h3>
 
-                    </div>
+                            <p>
+                                Festivals, performances, cultural programmes
+                                and traditions captured through storytelling.
+                            </p>
 
-                </div>
-
-
-                <!-- EVENT CARD 04 -->
-
-                <div class="events-type-item reveal">
-
-                    <div class="events-type-image">
-
-                        <img src="images/social-gatherings-placeholder.jpg"
-                             alt="Social gathering photography">
+                        </div>
 
                     </div>
 
-                    <div class="events-type-content">
+
+                    <div class="events-type-item reveal">
 
                         <span class="events-type-number">04</span>
 
-                        <h3>Social Gatherings</h3>
+                        <div class="events-type-content">
 
-                        <p>
-                            Elegant gatherings, exclusive parties,
-                            special occasions and memorable experiences.
-                        </p>
+                            <h3>Social Gatherings</h3>
+
+                            <p>
+                                Elegant gatherings, exclusive parties,
+                                special occasions and memorable experiences.
+                            </p>
+
+                        </div>
 
                     </div>
+
 
                 </div>
 
@@ -250,14 +252,17 @@
         </section>
 
 
-        <!-- =========================================
-             04. EVENTS GALLERY
-             12 IMAGE PLACEHOLDERS
-        ========================================== -->
 
-        <section class="events-gallery-section reveal" id="events-gallery">
+        <!-- =========================================
+             04. EVENT GALLERY
+             12 IMAGE PLACEHOLDERS
+    ========================================== -->
+
+        <section class="events-gallery-section reveal"
+                 id="events-gallery">
 
             <div class="events-gallery-container">
+
 
                 <div class="events-gallery-heading">
 
@@ -271,14 +276,15 @@
                     </h2>
 
                     <p>
-                        A glimpse into the moments we've had the privilege
-                        of capturing.
+                        A glimpse into the moments we've had
+                        the privilege of capturing.
                     </p>
 
                 </div>
 
 
-                <!-- 12 IMAGE GALLERY -->
+                <!-- 12 IMAGE PLACEHOLDERS -->
+
 
                 <div class="events-gallery-grid">
 
@@ -288,7 +294,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-01.jpg"
-                             alt="Event photography gallery image 1"
+                             alt="Event photography 1"
                              loading="lazy">
 
                     </div>
@@ -299,7 +305,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-02.jpg"
-                             alt="Event photography gallery image 2"
+                             alt="Event photography 2"
                              loading="lazy">
 
                     </div>
@@ -310,7 +316,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-03.jpg"
-                             alt="Event photography gallery image 3"
+                             alt="Event photography 3"
                              loading="lazy">
 
                     </div>
@@ -321,7 +327,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-04.jpg"
-                             alt="Event photography gallery image 4"
+                             alt="Event photography 4"
                              loading="lazy">
 
                     </div>
@@ -332,7 +338,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-05.jpg"
-                             alt="Event photography gallery image 5"
+                             alt="Event photography 5"
                              loading="lazy">
 
                     </div>
@@ -343,7 +349,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-06.jpg"
-                             alt="Event photography gallery image 6"
+                             alt="Event photography 6"
                              loading="lazy">
 
                     </div>
@@ -354,7 +360,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-07.jpg"
-                             alt="Event photography gallery image 7"
+                             alt="Event photography 7"
                              loading="lazy">
 
                     </div>
@@ -365,7 +371,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-08.jpg"
-                             alt="Event photography gallery image 8"
+                             alt="Event photography 8"
                              loading="lazy">
 
                     </div>
@@ -376,7 +382,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-09.jpg"
-                             alt="Event photography gallery image 9"
+                             alt="Event photography 9"
                              loading="lazy">
 
                     </div>
@@ -387,7 +393,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-10.jpg"
-                             alt="Event photography gallery image 10"
+                             alt="Event photography 10"
                              loading="lazy">
 
                     </div>
@@ -398,7 +404,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-11.jpg"
-                             alt="Event photography gallery image 11"
+                             alt="Event photography 11"
                              loading="lazy">
 
                     </div>
@@ -409,7 +415,7 @@
                     <div class="events-gallery-item reveal">
 
                         <img src="images/events-gallery-12.jpg"
-                             alt="Event photography gallery image 12"
+                             alt="Event photography 12"
                              loading="lazy">
 
                     </div>
@@ -422,13 +428,15 @@
         </section>
 
 
+
         <!-- =========================================
              05. OUR APPROACH
-        ========================================== -->
+    ========================================== -->
 
         <section class="events-approach-section reveal">
 
             <div class="events-approach-container">
+
 
                 <div class="events-approach-heading">
 
@@ -444,7 +452,7 @@
                 </div>
 
 
-                <!-- APPROACH CARD 01 -->
+                <!-- APPROACH 01 -->
 
                 <div class="events-approach-card reveal">
 
@@ -463,7 +471,7 @@
                 </div>
 
 
-                <!-- APPROACH CARD 02 -->
+                <!-- APPROACH 02 -->
 
                 <div class="events-approach-card reveal">
 
@@ -482,7 +490,7 @@
                 </div>
 
 
-                <!-- APPROACH CARD 03 -->
+                <!-- APPROACH 03 -->
 
                 <div class="events-approach-card reveal">
 
@@ -506,13 +514,15 @@
         </section>
 
 
+
         <!-- =========================================
              06. FINAL CTA
-        ========================================== -->
+    ========================================== -->
 
         <section class="events-cta-section reveal">
 
             <div class="events-cta-content">
+
 
                 <span class="events-section-eyebrow">
                     YOUR EVENT. OUR LENS.
@@ -532,19 +542,38 @@
                     PLAN YOUR EVENT COVERAGE
                 </a>
 
+
             </div>
 
         </section>
 
 
-    </main>
+    </div>
+    <!-- END SHARED BACKGROUND WRAPPER -->
 
 
-    <!-- =========================================
-         EVENTS PAGE JAVASCRIPT
-    ========================================== -->
+</main>
 
-    <script src="script.js"></script>
+
+
+<!-- =========================================
+     FOOTER
+
+     OUTSIDE SHARED BACKGROUND WRAPPER
+     FOOTER WILL HAVE ITS OWN BACKGROUND
+========================================== -->
+
+<footer class="events-footer">
+
+    <!-- Existing website footer can be integrated here -->
+
+</footer>
+
+
+
+<!-- EVENTS PAGE SCRIPT -->
+
+<script src="script.js"></script>
 
 </body>
 </html>
