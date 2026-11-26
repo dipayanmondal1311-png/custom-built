@@ -145,13 +145,6 @@ const revealSelectors = [
     ".wedding-gallery-container",
     ".wedding-approach-container",
     ".wedding-cta-content",
-   /* EVENTS */
-".events-hero-content",
-".events-intro-section",
-".events-type-item",
-".events-gallery-item",
-".events-approach-card",
-".events-cta-content",
     /* FOOTERS */
     ".footer-column",
     ".footer-main"
@@ -173,9 +166,6 @@ const staggerGroups = [
     ".values-grid",
     ".client-reviews-grid",
     ".statistics-grid"
-   ".events-types-grid",
-".events-gallery-grid",
-".events-approach-grid",
 ];
 
 staggerGroups.forEach(selector => {
