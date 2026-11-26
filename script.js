@@ -735,8 +735,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ==========================================
    WEDDING — SCROLL RESPONSIVE BACKGROUND ZOOM
-   SCROLL DOWN = ZOOM IN
-   SCROLL UP = ZOOM OUT
 ========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -761,28 +759,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateWeddingBackgroundZoom() {
 
-        const introRect = weddingIntro.getBoundingClientRect();
-        const ctaRect = weddingCTA.getBoundingClientRect();
+        const start =
+            weddingIntro.offsetTop;
 
-        const startPosition = introRect.top + window.scrollY;
-        const endPosition = ctaRect.bottom + window.scrollY;
+        const end =
+            weddingCTA.offsetTop + weddingCTA.offsetHeight;
 
-        const currentPosition = window.scrollY;
-
-        const totalDistance = endPosition - startPosition;
-
-        if (totalDistance <= 0) return;
+        const scrollPosition = window.scrollY;
 
         const progress = Math.max(
             0,
             Math.min(
                 1,
-                (currentPosition - startPosition) / totalDistance
+                (scrollPosition - start) /
+                (end - start)
             )
         );
 
-        // Start: 100%
-        // End: 140%
         const zoom = 1 + (progress * 0.40);
 
         document.body.style.setProperty(
