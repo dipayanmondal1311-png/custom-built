@@ -1168,3 +1168,72 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+
+/* ==========================================
+   OTHER SERVICES — SCROLL RESPONSIVE BACKGROUND
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const otherServicesBackground = document.querySelector(
+        ".other-services-shared-bg"
+    );
+
+    if (!otherServicesBackground) return;
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+    if (reducedMotion.matches) return;
+
+    let ticking = false;
+
+    function updateOtherServicesBackgroundZoom() {
+
+        const rect = otherServicesBackground.getBoundingClientRect();
+
+        const viewportHeight = window.innerHeight;
+
+        const totalDistance = viewportHeight + rect.height;
+
+        const progress = Math.max(
+            0,
+            Math.min(
+                1,
+                (viewportHeight - rect.top) / totalDistance
+            )
+        );
+
+        const zoom = 100 + (progress * 40);
+
+        otherServicesBackground.style.setProperty(
+            "--other-services-bg-size",
+            `${zoom.toFixed(2)}%`
+        );
+
+        ticking = false;
+    }
+
+    function requestZoomUpdate() {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(
+                updateOtherServicesBackgroundZoom
+            );
+
+            ticking = true;
+        }
+    }
+
+    window.addEventListener("scroll", requestZoomUpdate, {
+        passive: true
+    });
+
+    window.addEventListener("resize", requestZoomUpdate);
+
+    updateOtherServicesBackgroundZoom();
+
+});
