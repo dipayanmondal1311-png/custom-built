@@ -1057,3 +1057,20 @@ body::before {
     will-change: transform;
 }
 
+/* ==========================================
+   WEDDING CONTENT — ONE STEP BOLDER
+========================================== */
+
+#top h1,
+#top h2,
+#top h3,
+#top p,
+#top .wedding-eyebrow,
+#top .wedding-section-label,
+#top .wedding-type-number,
+#top .wedding-highlight-number,
+#top .wedding-button,
+#top .wedding-hero-bottom,
+#top .wedding-approach-card > span {
+    font-weight: 500;
+}
