@@ -760,10 +760,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateWeddingBackgroundZoom() {
 
         const start =
-            weddingIntro.offsetTop;
+            weddingIntro.getBoundingClientRect().top +
+            window.scrollY;
 
         const end =
-            weddingCTA.offsetTop + weddingCTA.offsetHeight;
+            weddingCTA.getBoundingClientRect().top +
+            window.scrollY +
+            weddingCTA.offsetHeight;
 
         const scrollPosition = window.scrollY;
 
@@ -807,7 +810,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateWeddingBackgroundZoom();
 
 });
-
 
 
 /* ==========================================
