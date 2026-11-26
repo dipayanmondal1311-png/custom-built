@@ -806,4 +806,161 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+/* ==========================================
+   EVENTS PAGE — REVEAL & SCROLL BACKGROUND
+   APPEND TO EXISTING GLOBAL script.js
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* EVENTS REVEAL ANIMATIONS */
+
+    const eventsSelectors = [
+        ".events-hero-content",
+        ".events-intro-inner",
+        ".events-section-heading",
+        ".events-highlights-content",
+        ".events-highlight-item",
+        ".events-approach-intro",
+        ".events-cta"
+    ];
+
+    eventsSelectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+            el.classList.add("reveal");
+        });
+    });
+
+
+    /* EVENTS STAGGER */
+
+    const eventsStaggerSelectors = [
+        ".events-type-card",
+        ".events-gallery-item",
+        ".events-approach-card"
+    ];
+
+    eventsStaggerSelectors.forEach(selector => {
+
+        document.querySelectorAll(selector).forEach((el, index) => {
+
+            el.classList.add("reveal");
+
+            el.style.setProperty(
+                "--reveal-delay",
+                `${Math.min(index * 100, 500)}ms`
+            );
+
+        });
+
+    });
+
+
+    /* EVENTS REVEAL OBSERVER */
+
+    const eventsRevealElements = document.querySelectorAll(
+        ".events-page .reveal"
+    );
+
+    if ("IntersectionObserver" in window) {
+
+        const eventsRevealObserver = new IntersectionObserver(
+            (entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12,
+                rootMargin: "0px 0px -45px 0px"
+            }
+        );
+
+        eventsRevealElements.forEach(el => {
+            eventsRevealObserver.observe(el);
+        });
+
+    } else {
+
+        eventsRevealElements.forEach(el => {
+            el.classList.add("visible");
+        });
+
+    }
+
+
+    /* EVENTS SCROLL RESPONSIVE BACKGROUND */
+
+    const shared = document.querySelector(".events-shared-bg");
+
+    if (!shared) return;
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    );
+
+    if (reducedMotion.matches) return;
+
+    let ticking = false;
+
+    function updateEventsZoom() {
+
+        const rect = shared.getBoundingClientRect();
+
+        const total = window.innerHeight + rect.height;
+
+        const progress = Math.max(
+            0,
+            Math.min(
+                1,
+                (window.innerHeight - rect.top) / total
+            )
+        );
+
+        const zoom = 100 + (progress * 40);
+
+        shared.style.setProperty(
+            "--events-bg-size",
+            `${zoom.toFixed(2)}%`
+        );
+
+        ticking = false;
+
+    }
+
+
+    function requestUpdate() {
+
+        if (!ticking) {
+
+            requestAnimationFrame(updateEventsZoom);
+
+            ticking = true;
+
+        }
+
+    }
+
+
+    window.addEventListener("scroll", requestUpdate, {
+        passive: true
+    });
+
+    window.addEventListener("resize", requestUpdate);
+
+    updateEventsZoom();
+
+});
+
+
 
