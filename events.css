@@ -809,3 +809,47 @@
     }
 
 }
+
+
+
+/* ==========================================
+   EVENTS — REDUCED SECTION SPACING
+========================================== */
+
+.events-page .events-intro,
+.events-page .events-types,
+.events-page .events-highlights,
+.events-page .events-portfolio,
+.events-page .events-approach {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.events-page .events-cta {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* ==========================================
+   EVENTS — MOBILE SECTION SPACING
+========================================== */
+
+@media (max-width: 600px) {
+
+    .events-page .events-intro,
+    .events-page .events-types,
+    .events-page .events-highlights,
+    .events-page .events-portfolio,
+    .events-page .events-approach {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .events-page .events-cta {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+}
+
