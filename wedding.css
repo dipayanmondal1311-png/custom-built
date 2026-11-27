@@ -1092,3 +1092,25 @@ body::before {
     padding-top: 80px;
     padding-bottom: 80px;
 }
+
+
+/* ==========================================
+   MOBILE — REDUCED SECTION SPACING
+========================================== */
+
+@media (max-width: 600px) {
+
+    #top .wedding-introduction,
+    #top .wedding-types-section,
+    #top .wedding-story-background,
+    #top .wedding-gallery-section,
+    #top .wedding-approach-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #top .wedding-cta-section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+}
