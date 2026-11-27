@@ -1074,3 +1074,21 @@ body::before {
 #top .wedding-approach-card > span {
     font-weight: 500;
 }
+
+/* ==========================================
+   WEDDING — REDUCED SECTION SPACING
+========================================== */
+
+#top .wedding-introduction,
+#top .wedding-types-section,
+#top .wedding-story-background,
+#top .wedding-gallery-section,
+#top .wedding-approach-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#top .wedding-cta-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
