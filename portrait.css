@@ -967,3 +967,46 @@
     }
 
 }
+
+
+/* ==========================================
+   PORTRAIT — REDUCED SECTION SPACING
+========================================== */
+
+.portrait-page .portrait-intro,
+.portrait-page .portrait-styles,
+.portrait-page .portrait-perspective,
+.portrait-page .portrait-portfolio,
+.portrait-page .portrait-approach {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.portrait-page .portrait-cta {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* ==========================================
+   PORTRAIT — MOBILE SECTION SPACING
+========================================== */
+
+@media (max-width: 600px) {
+
+    .portrait-page .portrait-intro,
+    .portrait-page .portrait-styles,
+    .portrait-page .portrait-perspective,
+    .portrait-page .portrait-portfolio,
+    .portrait-page .portrait-approach {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .portrait-page .portrait-cta {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+}
+
