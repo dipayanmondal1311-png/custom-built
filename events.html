@@ -418,345 +418,410 @@
 </main>
 
 
-  <!-- FOOTER -->
-<footer class="footer">
+<!-- =========================
+         08. FOOTER
+    ========================== -->
+    <footer class="footer">
 
-    <div class="footer-container">
+        <div class="footer-container">
 
-        <div class="footer-brand">
+            <!-- BRAND -->
+            <div class="footer-brand">
 
-            <a href="index.html" class="footer-logo">
-                <img src="images/heera-logo.png"
-                     alt="Heera Photography Jaipur">
+                <a href="index.html" class="footer-logo">
+                    <img src="images/heera-logo.png"
+                         alt="Heera Photography Jaipur">
+                </a>
+
+                <p class="footer-tagline">
+                    Every Frame Holds a Story.
+                </p>
+
+                <p class="footer-description">
+                    Capturing timeless memories,
+                    one beautiful story at a time.
+                </p>
+
+            </div>
+
+
+            <!-- EXPLORE -->
+            <div class="footer-column">
+
+                <h3>EXPLORE</h3>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="testimonials.html">Testimonials</a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+            <div class="footer-column">
+
+                <h3>OUR SERVICES</h3>
+
+                <a href="wedding.html">Wedding Photography</a>
+                <a href="pre-wedding.html">Pre-Wedding</a>
+                <a href="events.html">Events Photography</a>
+                <a href="portraits.html">Portrait Photography</a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="footer-column">
+
+                <h3>GET IN TOUCH</h3>
+
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">Book Your Date</a>
+
+                <div class="footer-social">
+
+                    <a href="https://www.instagram.com/heeraphotographyjaipur?utm_source=ig_web_button_share_sheet&knvt=ZDNlZDc0MzIxNw=="
+                       aria-label="Instagram"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/heera2016"
+                       aria-label="Facebook"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/@heeraphotographyjaipur"
+                       aria-label="YouTube"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 HEERA PHOTOGRAPHY JAIPUR.
+                ALL RIGHTS RESERVED.
+            </p>
+
+            <a href="#top" class="back-to-top">
+                BACK TO TOP
+                <i class="fa-solid fa-arrow-up"></i>
             </a>
 
-            <p class="footer-tagline">
-                Every Frame Holds a Story.
-            </p>
-
-            <p class="footer-description">
-                Capturing timeless memories,
-                one beautiful story at a time.
-            </p>
-
         </div>
 
-        <div class="footer-column">
-            <h3>EXPLORE</h3>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Our Services</a>
-            <a href="testimonials.html">Testimonials</a>
-        </div>
+    </footer>
 
-        <div class="footer-column">
-            <h3>DISCOVER</h3>
-            <a href="services.html">Wedding Photography</a>
-            <a href="services.html">Pre-Wedding</a>
-            <a href="services.html">Cinematography</a>
-            <a href="services.html">Events & Celebrations</a>
-        </div>
 
-        <div class="footer-column">
-            <h3>GET IN TOUCH</h3>
-            <a href="contact.html">Contact Us</a>
-            <a href="ai-assistant.html">AI Assistant</a>
-            <a href="contact.html">Book Your Date</a>
+    <!-- =========================
+         HEERA AI CHAT WIDGET
+    ========================== -->
+    <div class="heera-ai-widget">
 
-            <div class="footer-social">
+        <!-- FLOATING BUTTON -->
+        <button
+            class="heera-ai-launcher"
+            id="heera-ai-launcher"
+            type="button"
+            aria-label="Open HEERA AI Assistant"
+            aria-expanded="false"
+            aria-controls="heera-ai-panel">
 
-                <a href="#"
-                   aria-label="Instagram"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+            <svg class="heera-ai-mascot"
+                 viewBox="0 0 120 120"
+                 xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true">
 
-                <a href="#"
-                   aria-label="Facebook"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
+                <defs>
 
-                <a href="#"
-                   aria-label="YouTube"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+                    <linearGradient id="heeraGold" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#fff0b0"/>
+                        <stop offset="35%" stop-color="#e8c56f"/>
+                        <stop offset="70%" stop-color="#b88732"/>
+                        <stop offset="100%" stop-color="#f5d98c"/>
+                    </linearGradient>
+
+                    <linearGradient id="heeraFace" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#29251e"/>
+                        <stop offset="100%" stop-color="#080808"/>
+                    </linearGradient>
+
+                </defs>
+
+                <!-- Antennas -->
+                <path d="M29 34 V17 M91 34 V17"
+                      stroke="url(#heeraGold)"
+                      stroke-width="5"
+                      stroke-linecap="round"/>
+
+                <!-- Side headphones -->
+                <path d="M27 39 C12 39 9 53 9 67 C9 81 16 91 29 91 L35 82 V48 Z"
+                      fill="url(#heeraGold)"
+                      stroke="#f8df9b"
+                      stroke-width="1.5"/>
+
+                <path d="M93 39 C108 39 111 53 111 67 C111 81 104 91 91 91 L85 82 V48 Z"
+                      fill="url(#heeraGold)"
+                      stroke="#f8df9b"
+                      stroke-width="1.5"/>
+
+                <!-- Main body -->
+                <path d="M60 9 C87 9 106 27 106 54
+                         C106 76 94 91 77 98
+                         L83 111 L58 101
+                         C32 103 14 84 14 57
+                         C14 29 33 9 60 9 Z"
+                      fill="url(#heeraGold)"
+                      stroke="#ffe8a5"
+                      stroke-width="1.5"/>
+
+                <!-- Face -->
+                <rect x="23" y="25" width="74" height="62"
+                      rx="29"
+                      fill="url(#heeraFace)"
+                      stroke="#f4d88d"
+                      stroke-width="2.5"/>
+
+                <!-- Eyes -->
+                <path d="M39 53 Q48 43 57 53"
+                      fill="none"
+                      stroke="#f6d77e"
+                      stroke-width="5"
+                      stroke-linecap="round"/>
+
+                <path d="M63 53 Q72 43 81 53"
+                      fill="none"
+                      stroke="#f6d77e"
+                      stroke-width="5"
+                      stroke-linecap="round"/>
+
+                <!-- Smile -->
+                <path d="M50 66 Q60 77 70 66"
+                      fill="none"
+                      stroke="#f6d77e"
+                      stroke-width="3.5"
+                      stroke-linecap="round"/>
+
+            </svg>
+
+            <span class="heera-ai-launcher-label">
+                HEERA AI
+            </span>
+
+        </button>
+
+
+        <!-- CHAT PANEL -->
+        <section
+            class="heera-ai-panel"
+            id="heera-ai-panel"
+            aria-label="HEERA AI Assistant chat"
+            aria-hidden="true"
+            hidden>
+
+            <!-- HEADER -->
+            <div class="heera-ai-header">
+
+                <div class="heera-ai-brand">
+
+                    <div class="heera-ai-avatar" aria-hidden="true">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.5"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <rect x="4" y="7" width="16" height="13" rx="4"/>
+                            <path d="M12 3v4M9 12h.01M15 12h.01"/>
+                            <path d="M9 16h6M2 12h2M20 12h2"/>
+
+                        </svg>
+
+                    </div>
+
+                    <div class="heera-ai-brand-info">
+
+                        <h3>HEERA AI Assistant</h3>
+
+                        <p>
+                            <span class="heera-ai-status-dot"></span>
+                            Here to assist you
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="heera-ai-close"
+                    id="heera-ai-close"
+                    aria-label="Close chat">
+
+                    &times;
+
+                </button>
 
             </div>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 HEERA PHOTOGRAPHY JAIPUR.
-            ALL RIGHTS RESERVED.
-        </p>
-
-        <a href="#home" class="back-to-top">
-            BACK TO TOP
-            <i class="fa-solid fa-arrow-up"></i>
-        </a>
-
-    </div>
-
-</footer>
 
 
-<!-- HEERA AI WIDGET -->
-<div class="heera-ai-widget">
+            <!-- MESSAGES -->
+            <div
+                class="heera-ai-messages"
+                id="ai-messages"
+                aria-live="polite"
+                aria-label="Conversation">
 
-<button class="heera-ai-launcher"
-        id="heera-ai-launcher"
-        type="button"
-        aria-label="Open HEERA AI Assistant"
-        aria-expanded="false"
-        aria-controls="heera-ai-panel">
+                <!-- WELCOME MESSAGE -->
+                <div class="heera-ai-welcome">
 
-    <svg class="heera-ai-mascot"
-         viewBox="0 0 120 120"
-         xmlns="http://www.w3.org/2000/svg"
-         aria-hidden="true">
+                    <div class="heera-ai-welcome-avatar">
 
-        <defs>
-            <linearGradient id="heeraGold" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#fff0b0"/>
-                <stop offset="35%" stop-color="#e8c56f"/>
-                <stop offset="70%" stop-color="#b88732"/>
-                <stop offset="100%" stop-color="#f5d98c"/>
-            </linearGradient>
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.5"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
 
-            <linearGradient id="heeraFace" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#29251e"/>
-                <stop offset="100%" stop-color="#080808"/>
-            </linearGradient>
-        </defs>
+                            <rect x="4" y="7" width="16" height="13" rx="4"/>
+                            <path d="M12 3v4M9 12h.01M15 12h.01"/>
+                            <path d="M9 16h6M2 12h2M20 12h2"/>
 
-        <path d="M29 34 V17 M91 34 V17"
-              stroke="url(#heeraGold)"
-              stroke-width="5"
-              stroke-linecap="round"/>
+                        </svg>
 
-        <path d="M27 39 C12 39 9 53 9 67 C9 81 16 91 29 91 L35 82 V48 Z"
-              fill="url(#heeraGold)"
-              stroke="#f8df9b"
-              stroke-width="1.5"/>
+                    </div>
 
-        <path d="M93 39 C108 39 111 53 111 67 C111 81 104 91 91 91 L85 82 V48 Z"
-              fill="url(#heeraGold)"
-              stroke="#f8df9b"
-              stroke-width="1.5"/>
+                    <div class="heera-ai-welcome-content">
 
-        <path d="M60 9 C87 9 106 27 106 54
-                 C106 76 94 91 77 98
-                 L83 111 L58 101
-                 C32 103 14 84 14 57
-                 C14 29 33 9 60 9 Z"
-              fill="url(#heeraGold)"
-              stroke="#ffe8a5"
-              stroke-width="1.5"/>
+                        <span class="heera-ai-welcome-label">
+                            WELCOME TO HEERA
+                        </span>
 
-        <rect x="23" y="25" width="74" height="62"
-              rx="29"
-              fill="url(#heeraFace)"
-              stroke="#f4d88d"
-              stroke-width="2.5"/>
+                        <h4>
+                            Every moment deserves
+                            to be remembered.
+                        </h4>
 
-        <path d="M39 53 Q48 43 57 53"
-              fill="none"
-              stroke="#f6d77e"
-              stroke-width="5"
-              stroke-linecap="round"/>
+                        <p>
+                            I'm HEERA AI Assistant. I can help you
+                            explore our photography services, wedding
+                            packages, bookings and more.
+                        </p>
 
-        <path d="M63 53 Q72 43 81 53"
-              fill="none"
-              stroke="#f6d77e"
-              stroke-width="5"
-              stroke-linecap="round"/>
+                        <span class="heera-ai-prompt">
+                            How can I help you today?
+                        </span>
 
-        <path d="M50 66 Q60 77 70 66"
-              fill="none"
-              stroke="#f6d77e"
-              stroke-width="3.5"
-              stroke-linecap="round"/>
+                    </div>
 
-    </svg>
+                </div>
 
-    <span class="heera-ai-launcher-label">HEERA AI</span>
-</button>
-
-
-<!-- CHAT WINDOW -->
-<section class="heera-ai-panel"
-         id="heera-ai-panel"
-         aria-label="HEERA AI Assistant chat"
-         aria-hidden="true"
-         hidden>
-
-    <div class="heera-ai-header">
-
-        <div class="heera-ai-brand">
-
-            <div class="heera-ai-avatar" aria-hidden="true">
-                <svg viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="1.5"
-                     stroke-linecap="round"
-                     stroke-linejoin="round">
-                    <rect x="4" y="7" width="16" height="13" rx="4"/>
-                    <path d="M12 3v4M9 12h.01M15 12h.01"/>
-                    <path d="M9 16h6M2 12h2M20 12h2"/>
-                </svg>
             </div>
 
-            <div class="heera-ai-brand-info">
-                <h3>HEERA AI Assistant</h3>
-                <p>
-                    <span class="heera-ai-status-dot"></span>
-                    Here to assist you
+
+            <!-- SUGGESTED QUESTIONS -->
+            <div class="heera-ai-suggestions">
+
+                <button
+                    type="button"
+                    class="suggestion"
+                    data-message="What photography services do you offer?">
+                    Our Services
+                </button>
+
+                <button
+                    type="button"
+                    class="suggestion"
+                    data-message="Tell me about your wedding photography packages.">
+                    Wedding Packages
+                </button>
+
+                <button
+                    type="button"
+                    class="suggestion"
+                    data-message="How can I book a photography session?">
+                    Book a Session
+                </button>
+
+                <button
+                    type="button"
+                    class="suggestion"
+                    data-message="How can I contact Heera Photography?">
+                    Contact Us
+                </button>
+
+            </div>
+
+
+            <!-- INPUT -->
+            <div class="heera-ai-input-area">
+
+                <form class="heera-ai-chat-form" id="ai-chat-form">
+
+                    <input
+                        type="text"
+                        id="ai-chat-input"
+                        placeholder="Ask us anything..."
+                        autocomplete="off"
+                        maxlength="1000"
+                        aria-label="Type your question"
+                        required>
+
+                    <button
+                        type="submit"
+                        class="heera-ai-send"
+                        id="ai-send-button"
+                        aria-label="Send message">
+
+                        <svg viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="1.8"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <path d="M22 2 11 13"/>
+                            <path d="m22 2-7 20-4-9-9-4 20-7Z"/>
+
+                        </svg>
+
+                    </button>
+
+                </form>
+
+                <p class="heera-ai-disclaimer">
+                    HEERA AI Assistant provides general information.
+                    Please confirm final pricing and availability
+                    with our team.
                 </p>
-            </div>
-
-        </div>
-
-        <button type="button"
-                class="heera-ai-close"
-                id="heera-ai-close"
-                aria-label="Close chat">
-            &times;
-        </button>
-
-    </div>
-
-
-    <!-- CHAT MESSAGES -->
-    <div class="heera-ai-messages"
-         id="ai-messages"
-         aria-live="polite"
-         aria-label="Conversation">
-
-        <div class="heera-ai-welcome">
-
-            <div class="heera-ai-welcome-avatar">
-                <svg viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="1.5"
-                     stroke-linecap="round"
-                     stroke-linejoin="round">
-                    <rect x="4" y="7" width="16" height="13" rx="4"/>
-                    <path d="M12 3v4M9 12h.01M15 12h.01"/>
-                    <path d="M9 16h6M2 12h2M20 12h2"/>
-                </svg>
-            </div>
-
-            <div class="heera-ai-welcome-content">
-
-                <span class="heera-ai-welcome-label">
-                    MEET HEERA AI
-                </span>
-
-                <h4>
-                    Every beautiful story starts with a conversation.
-                </h4>
-
-                <p>
-                    I'm HEERA AI Assistant. I can help you
-                    explore our photography services, wedding
-                    packages, bookings and more.
-                </p>
-
-                <span class="heera-ai-prompt">
-                    How can I help you today?
-                </span>
 
             </div>
-        </div>
+
+        </section>
 
     </div>
 
 
-    <!-- SUGGESTED QUESTIONS -->
-    <div class="heera-ai-suggestions">
-
-        <button type="button"
-                class="suggestion"
-                data-message="What photography services do you offer?">
-            Our Services
-        </button>
-
-        <button type="button"
-                class="suggestion"
-                data-message="Tell me about your wedding photography packages.">
-            Wedding Packages
-        </button>
-
-        <button type="button"
-                class="suggestion"
-                data-message="How can I book a photography session?">
-            Book a Session
-        </button>
-
-        <button type="button"
-                class="suggestion"
-                data-message="How can I contact Heera Photography?">
-            Contact Us
-        </button>
-
-    </div>
-
-
-    <!-- MESSAGE INPUT -->
-    <div class="heera-ai-input-area">
-
-        <form class="heera-ai-chat-form" id="ai-chat-form">
-
-            <input type="text"
-                   id="ai-chat-input"
-                   placeholder="Ask us anything..."
-                   autocomplete="off"
-                   maxlength="1000"
-                   aria-label="Type your question"
-                   required>
-
-            <button type="submit"
-                    class="heera-ai-send"
-                    id="ai-send-button"
-                    aria-label="Send message">
-
-                <svg viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="1.8"
-                     stroke-linecap="round"
-                     stroke-linejoin="round">
-                    <path d="M22 2 11 13"/>
-                    <path d="m22 2-7 20-4-9-9-4 20-7Z"/>
-                </svg>
-
-            </button>
-
-        </form>
-
-        <p class="heera-ai-disclaimer">
-            HEERA AI Assistant provides general information.
-            Please confirm final pricing and availability
-            with our team.
-        </p>
-
-    </div>
-
-</section>
-
-</div>
-
-<script src="script.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
 
 </body>
 </html>
