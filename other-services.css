@@ -812,3 +812,45 @@
     }
 
 }
+
+
+/* ==========================================
+   OTHER SERVICES — REDUCED SECTION SPACING
+========================================== */
+
+.other-services-page .other-services-intro,
+.other-services-page .other-services-styles,
+.other-services-page .other-services-locations,
+.other-services-page .other-services-portfolio,
+.other-services-page .other-services-approach {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.other-services-page .other-services-cta {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* ==========================================
+   OTHER SERVICES — MOBILE SECTION SPACING
+========================================== */
+
+@media (max-width: 600px) {
+
+    .other-services-page .other-services-intro,
+    .other-services-page .other-services-styles,
+    .other-services-page .other-services-locations,
+    .other-services-page .other-services-portfolio,
+    .other-services-page .other-services-approach {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .other-services-page .other-services-cta {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+}
