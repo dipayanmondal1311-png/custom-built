@@ -808,3 +808,44 @@
     }
 
 }
+
+
+/* ==========================================
+   PREWEDDING — REDUCED SECTION SPACING
+========================================== */
+
+.prewedding-page .prewedding-intro,
+.prewedding-page .prewedding-styles,
+.prewedding-page .prewedding-locations,
+.prewedding-page .prewedding-portfolio,
+.prewedding-page .prewedding-approach {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.prewedding-page .prewedding-cta {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+/* ==========================================
+   PREWEDDING — MOBILE SECTION SPACING
+========================================== */
+
+@media (max-width: 600px) {
+
+    .prewedding-page .prewedding-intro,
+    .prewedding-page .prewedding-styles,
+    .prewedding-page .prewedding-locations,
+    .prewedding-page .prewedding-portfolio,
+    .prewedding-page .prewedding-approach {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .prewedding-page .prewedding-cta {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+}
