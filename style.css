@@ -9080,3 +9080,45 @@ body.contact-page .site-header .nav-logo .brand-tagline {
     filter: blur(32px);
 }
 
+/* ==========================================
+   VIEW ALL TESTIMONIALS LINK
+========================================== */
+
+.testimonials-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.testimonials-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #C6A15B;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    padding: 14px 28px;
+    border: 1px solid rgba(198, 161, 91, 0.4);
+    border-radius: 4px;
+
+    transition: all .35s ease;
+}
+
+.testimonials-more-link span {
+    transition: transform .35s ease;
+}
+
+.testimonials-more-link:hover {
+    background: rgba(198, 161, 91, 0.08);
+    border-color: #C6A15B;
+    box-shadow: 0 0 20px rgba(198, 161, 91, 0.15);
+    color: #E5C58A;
+}
+
+.testimonials-more-link:hover span {
+    transform: translateX(5px);
+}
