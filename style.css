@@ -9122,3 +9122,17 @@ body.contact-page .site-header .nav-logo .brand-tagline {
 .testimonials-more-link:hover span {
     transform: translateX(5px);
 }
+
+/* ==========================================
+   TESTIMONIALS — VIEW REVIEWS LINK POSITION
+========================================== */
+
+.testimonials-more {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    z-index: 2;
+}
