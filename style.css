@@ -9025,3 +9025,58 @@ body.contact-page .site-header .nav-logo .brand-tagline {
 .testimonial-card:hover::after {
     opacity: 1;
 }
+
+
+
+/* ==========================================
+   TESTIMONIAL — LUXURY GOLDEN HOVER GLOW
+========================================== */
+
+.testimonial-card {
+    position: relative;
+    transition:
+        transform .55s ease,
+        box-shadow .55s ease,
+        border-color .55s ease;
+}
+
+/* GLOW BEHIND THE CARD */
+
+.testimonial-card::after {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    z-index: -1;
+    border-radius: 8px;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(212, 175, 117, .65) 0%,
+        rgba(198, 161, 91, .38) 32%,
+        rgba(198, 161, 91, .15) 58%,
+        transparent 78%
+    );
+
+    filter: blur(25px);
+    opacity: 0;
+    transition: opacity .55s ease, filter .55s ease;
+    pointer-events: none;
+}
+
+/* HOVER EFFECT */
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 117, .55);
+
+    box-shadow:
+        0 0 18px rgba(212, 175, 117, .38),
+        0 0 45px rgba(198, 161, 91, .25),
+        0 0 75px rgba(198, 161, 91, .14);
+}
+
+.testimonial-card:hover::after {
+    opacity: 1;
+    filter: blur(32px);
+}
+
