@@ -8992,3 +8992,36 @@ body.contact-page .site-header .nav-logo .brand-tagline {
     }
 
 }
+
+/* ==========================================
+   TESTIMONIAL — LIFT & GOLDEN GLOW HOVER
+========================================== */
+
+.testimonial-card {
+    position: relative;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.testimonial-card::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: radial-gradient(
+        circle at center,
+        rgba(201, 164, 92, 0.18),
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 164, 92, 0.45);
+}
+
+.testimonial-card:hover::after {
+    opacity: 1;
+}
